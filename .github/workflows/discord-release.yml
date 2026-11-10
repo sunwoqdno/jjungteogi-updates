@@ -67,9 +67,13 @@ jobs:
           request = urllib.request.Request(
               webhook,
               data=json.dumps(payload).encode("utf-8"),
-              headers={"Content-Type": "application/json"},
+              headers={
+                  "Content-Type": "application/json",
+                  "User-Agent": "Jjungteogi-Discord-Notifier/1.0"
+              },
               method="POST"
           )
+
 
           with urllib.request.urlopen(request, timeout=20) as response:
               print("디스코드 전송 성공:", response.status)
