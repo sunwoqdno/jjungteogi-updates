@@ -2,6 +2,7 @@
 name: 쭝터기 디스코드 업데이트 공지
 
 on:
+  workflow_dispatch:
   release:
     types: [published]
 
@@ -15,33 +16,47 @@ jobs:
       - name: 디스코드에 업데이트 공지
         env:
           WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          EVENT_NAME: ${{ github.event_name }}
           RELEASE_JSON: ${{ toJSON(github.event.release) }}
         run: |
-          if [ -z "$WEBHOOK_URL" ]; then
-            echo "DISCORD_WEBHOOK_URL 비밀값이 없습니다."
-            exit 1
-          fi
-
           python3 - <<'PY'
           import json
           import os
           import urllib.request
 
-          release = json.loads(os.environ["RELEASE_JSON"])
-          version = release["tag_name"]
-          url = release["html_url"]
-          body = release.get("body") or "변경사항은 다운로드 페이지에서 확인해 주세요."
+          webhook = os.environ.get("WEBHOOK_URL", "")
+          if not webhook:
+              raise RuntimeError("DISCORD_WEBHOOK_URL 비밀값이 없습니다.")
 
-          message = {
+          event = os.environ["EVENT_NAME"]
+
+          if event == "workflow_dispatch":
+              title = "🧪 쭝터기 디스코드 연동 테스트"
+              description = (
+                  "GitHub Actions와 디스코드 웹후크가 "
+                  "정상적으로 연결되었습니다."
+              )
+              url = "https://github.com/sunwoqdno/jjungteogi-updates/releases"
+          else:
+              release = json.loads(os.environ["RELEASE_JSON"])
+              version = release["tag_name"]
+              title = f"🚀 쭝터기 {version} 업데이트"
+              description = (
+                  release.get("body")
+                  or "새로운 업데이트가 배포되었습니다."
+              )[:3500]
+              url = release["html_url"]
+
+          payload = {
               "username": "쭝터기 업데이트",
               "embeds": [{
-                  "title": f"🚀 쭝터기 {version} 업데이트",
+                  "title": title,
+                  "description": description,
                   "url": url,
-                  "description": body[:3500],
                   "color": 5793266,
                   "fields": [{
                       "name": "📥 다운로드",
-                      "value": f"[GitHub에서 다운로드]({url})"
+                      "value": f"[GitHub 릴리스 페이지]({url})"
                   }],
                   "footer": {
                       "text": "쭝터기 | AION2 PvP TOOL"
@@ -49,13 +64,13 @@ jobs:
               }]
           }
 
-          data = json.dumps(message).encode("utf-8")
-          req = urllib.request.Request(
-              os.environ["WEBHOOK_URL"],
-              data=data,
+          request = urllib.request.Request(
+              webhook,
+              data=json.dumps(payload).encode("utf-8"),
               headers={"Content-Type": "application/json"},
               method="POST"
           )
-          with urllib.request.urlopen(req, timeout=20) as res:
-              print("디스코드 공지 전송:", res.status)
+
+          with urllib.request.urlopen(request, timeout=20) as response:
+              print("디스코드 전송 성공:", response.status)
           PY
