@@ -1,0 +1,42 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#080d18"><meta name="description" content="쭝터기 오류 신고·업데이트 제안·어비스 일정 제보. GitHub Issues에 안전하게 전달합니다."><title>오류 신고와 개선 제안 | 쭝터기</title>
+<style>:root{font-family:Inter,Pretendard,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;color-scheme:dark;--bg:#080d18;--line:#29405a;--muted:#9dafc6;--mint:#80e8c9}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 90% 0%,#14354a 0,transparent 44%),var(--bg);color:#f1f6ff}a{text-decoration:none;color:inherit}button,input,textarea,select{font:inherit}button{border:1px solid #3a5470;border-radius:11px;background:#1b3551;color:#e3efff;font-weight:800;padding:13px 17px;cursor:pointer}button:hover{background:#24486d}input,textarea,select{background:#0d1929;border:1px solid #37526d;border-radius:11px;color:#f1f7ff;width:100%;padding:12px;min-height:46px}textarea{min-height:145px;resize:vertical}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--mint);outline-offset:3px}.wrap{width:calc(100% - 34px);max-width:1030px;margin:auto}.top{border-bottom:1px solid #263a53;background:#0b1524e3;backdrop-filter:blur(14px);position:sticky;top:0;z-index:3}.top .wrap{display:flex;min-height:70px;align-items:center;justify-content:space-between;gap:10px}.brand{font-weight:850;font-size:20px;letter-spacing:-.06em}.brand b{background:#247b78;padding:9px;border-radius:10px;font-size:15px;margin-right:7px}.nav{display:flex;gap:18px;color:#adc0d8;font-size:13px;font-weight:750}.hero{padding:55px 0 24px}.hero small{color:var(--mint);font-weight:800;font-size:12px;letter-spacing:.12em}.hero h1{font-size:clamp(34px,5vw,54px);letter-spacing:-.06em;margin:12px 0}.hero p{color:var(--muted);line-height:1.8;font-size:14px;margin:0}.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:15px;margin-top:26px}.panel{background:linear-gradient(150deg,#14283f,#101b2e);border:1px solid var(--line);border-radius:19px;padding:25px}.panel h2{font-size:20px;letter-spacing:-.04em;margin:0 0 19px}.form{display:grid;gap:15px}.form label{font-size:12px;color:#a6bed6;font-weight:800;display:block;margin-bottom:8px}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.primary{background:linear-gradient(110deg,#7ae6c3,#8ac0fa);border-color:#87dfc5;color:#082621}.primary:hover{background:#a3e9d7}.hint{font-size:12px;line-height:1.8;color:#9bb0c8}.hint strong{color:#c6eadb}.box{background:#112c37;border:1px solid #3b625f;border-radius:13px;padding:17px;margin-bottom:15px}.box h3{margin:0 0 9px;color:#9becd3;font-size:15px}.box p{margin:0;font-size:12px;color:#bad4d9;line-height:1.9}.how{font-size:13px;color:#a9c0d8;line-height:2;padding-left:20px}.how li{padding:5px 0}.link{color:#9acdfb;font-size:13px;font-weight:750}.small{font-size:11px;color:#8da4bf;line-height:1.8}.footer{border-top:1px solid #26374b;margin-top:42px;padding:25px 0;color:#899eb7;font-size:12px}.buttons{display:flex;gap:10px;flex-wrap:wrap}.warning{border:1px solid #6d5141;background:#352923;color:#f2d4b9;border-radius:12px;padding:14px 16px;line-height:1.8;font-size:12px}#status{min-height:19px;color:#a7e8d1;font-size:12px}
+@media(max-width:780px){.grid{grid-template-columns:1fr}}@media(max-width:460px){.row{grid-template-columns:1fr}.nav a:first-child{display:none}.nav{gap:11px}.panel{padding:18px}}</style></head>
+<body><header class="top"><div class="wrap"><a href="./" class="brand"><b>쭝</b> 쭝터기</a><nav class="nav"><a href="./">홈</a><a href="schedule.html">어비스 일정</a><a href="records.html">내 기록</a><a href="feedback.html" style="color:var(--mint)">문의</a></nav></div></header>
+<main class="wrap"><section class="hero"><small>HELP & FEEDBACK</small><h1>오류 신고 · 개선 제안</h1><p>버그, 신규 기능 요청, 11월 11일 매칭·시간표 변경 제보를 받습니다. 내용은 GitHub Issues에서 확인·관리할 수 있습니다.</p></section>
+<div class="warning"><strong>공개 제보 주의:</strong> GitHub에 등록되는 이슈는 누구나 볼 수 있습니다. 게임 계정·비밀번호·인증 코드·이메일·IP·개인정보·타인에 대한 민감한 정보는 포함하지 마세요. 전송은 GitHub 로그인 후 제출 버튼을 눌러야 완료됩니다.</div>
+<div class="grid"><section class="panel"><h2>새 제보 작성</h2><form id="feedback" class="form">
+<div class="row"><div><label for="type">분류</label><select id="type"><option>프로그램 버그</option><option>홈페이지 버그</option><option>어비스 일정·매칭표 정정</option><option>기능 개선 제안</option><option>기타 문의</option></select></div><div><label for="version">프로그램 버전 (선택)</label><input id="version" maxlength="24" placeholder="예: v0.9.68"></div></div>
+<div><label for="title">제목</label><input id="title" maxlength="100" placeholder="예: 네자칸 점령전 시간이 다르게 보입니다" required></div>
+<div><label for="details">내용 / 재현 방법</label><textarea id="details" maxlength="4000" required placeholder="어떤 기능에서 무엇이 발생했는지, 기대했던 동작과 실제 동작을 적어주세요. 시간표 제보는 출처와 확인 시각을 함께 적어주세요."></textarea></div>
+<div><label for="source">참고 링크 (선택)</label><input id="source" maxlength="350" placeholder="https://..."></div>
+<div class="buttons"><button class="primary" type="submit">GitHub에서 제보 등록 ↗</button><button type="button" id="copy">제보 내용 복사</button></div><div id="status" role="status"></div><p class="hint">이 화면 자체는 서버로 제보를 전송하지 않습니다. 제출 버튼을 누르면 GitHub 새 이슈 작성 페이지가 열리고, GitHub에서 최종 등록해야 합니다.</p>
+</form></section>
+<aside class="panel"><h2>제보 전 확인</h2><div class="box"><h3>어비스 일정이 다르다면</h3><p>서버명, 매칭 그룹, 게임 내 확인 시각, 공식 공지 링크를 알려주세요. 제보만으로 즉시 시간표가 변경되지 않으며 확인 후 반영합니다.</p></div><div class="box"><h3>프로그램 오류라면</h3><p>버전 번호, PC 화면 해상도, 발생한 메뉴, 재현 순서를 알려주세요. 개인정보가 포함된 화면이나 로그는 공개하지 마세요.</p></div><ol class="how"><li>분류와 제목을 선택합니다.</li><li>오류 상황 또는 개선 아이디어를 적습니다.</li><li>GitHub로 이동해 로그인합니다.</li><li>내용을 확인하고 최종 제출합니다.</li></ol><a class="link" href="https://github.com/sunwoqdno/jjungteogi-updates/issues" target="_blank" rel="noopener noreferrer">기존 제보 목록 보기 ↗</a><p class="small">GitHub 저장소에서 Issues 기능이 비활성화되어 있으면 설정에서 활성화해야 합니다.</p></aside></div>
+</main><footer class="footer"><div class="wrap">© 2026 Jjungteogi · 비공식 PvP 유틸리티 · GitHub Issues 기반 제보</div></footer>
+<script>
+(function(){
+"use strict";
+function $(id){return document.getElementById(id);}
+function details(){
+var type=$("type").value,title=$("title").value.trim(),version=$("version").value.trim(),body=$("details").value.trim(),source=$("source").value.trim();
+if(!title||!body)return null;
+if(source&&!/^https:\/\/[^\s]+$/i.test(source)){ $("status").textContent="참고 링크는 https:// 주소만 입력해 주세요.";return null;}
+var text="## 분류\n"+type+"\n\n## 버전\n"+(version||"미입력")+"\n\n## 제보 내용\n"+body+"\n\n## 참고 링크\n"+(source||"없음")+"\n\n---\n쭝터기 홈페이지에서 작성한 제보입니다. 공개 가능한 정보만 포함했는지 확인해 주세요.";
+return {title:"["+type+"] "+title,body:text};
+}
+$("feedback").addEventListener("submit",function(e){
+e.preventDefault();var form=details();if(!form)return;
+var href="https://github.com/sunwoqdno/jjungteogi-updates/issues/new?title="+encodeURIComponent(form.title)+"&body="+encodeURIComponent(form.body);
+if(href.length>7500){$("status").textContent="제보가 너무 길어 URL로 전달하기 어렵습니다. 내용을 복사해 GitHub에 붙여 주세요.";return;}
+$("status").textContent="GitHub 새 이슈 작성 페이지로 이동합니다. 등록은 GitHub에서 완료해야 합니다.";
+window.open(href,"_blank","noopener,noreferrer");
+});
+$("copy").addEventListener("click",function(){
+var form=details();if(!form)return;
+var text=form.title+"\n\n"+form.body;
+if(navigator.clipboard&&window.isSecureContext){
+navigator.clipboard.writeText(text).then(function(){$("status").textContent="제보 내용을 복사했습니다.";}).catch(function(){$("status").textContent="복사에 실패했습니다. 직접 텍스트를 선택해 주세요.";});
+}else{$("status").textContent="이 브라우저에서 자동 복사를 지원하지 않습니다. 직접 내용을 선택해 주세요.";}
+});
+})();
+</script></body></html>
