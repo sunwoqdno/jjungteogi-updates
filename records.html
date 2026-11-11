@@ -65,6 +65,7 @@ $("entry").addEventListener("submit",function(e){
  if(records.length>=MAX){$("status").textContent="최대 1,000건입니다. 백업 후 오래된 기록을 삭제하세요.";return;}
  records.unshift(record);
  if(save()){$("status").textContent="이 브라우저에 저장했습니다.";this.reset();nowInput();}
+ else{records.shift();}
  render();
 });
 $("search").addEventListener("input",renderList);
@@ -83,7 +84,9 @@ $("restore").addEventListener("change",function(){
    var parsed=obj.records.map(norm);
    if(parsed.some(function(x){return !x;}))throw Error("유효하지 않은 교전 기록이 있습니다.");
    if(!window.confirm("현재 기록 "+records.length+"건을 백업 파일 "+parsed.length+"건으로 교체할까요?"))return;
-   records=parsed;save();render();$("status").textContent="기록을 복원했습니다.";
+   var original=records;records=parsed;
+   if(save()){$("status").textContent="기록을 복원했습니다.";}else{records=original;}
+   render();
   }catch(e){$("status").textContent="복원 실패: "+String(e.message||e);}
  };
  reader.readAsText(file,"utf-8");
