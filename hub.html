@@ -90,7 +90,7 @@ function aLink(url,title){var a=el("a","source",title);a.href=url&&/^https:\/\//
 function hasData(){return !!(data&&schedule);}
 function selectedGroup(){return schedule&&schedule.matching.groups.find(function(g){return g.west===selectedServer||g.east===selectedServer;});}
 function setView(key){if(!["home","rewards","patches","calendar","updates","search"].includes(key))key="home";active=key;document.querySelectorAll(".view").forEach(function(v){v.hidden=v.id!==key;});document.querySelectorAll("#menu a[data-view]").forEach(function(a){a.classList.toggle("active",a.dataset.view===key);a.setAttribute("aria-current",a.dataset.view===key?"page":"false");});if(key==="search")setTimeout(function(){$("search-input").focus();},30);if(key==="updates"&&!releaseLoaded)fetchReleases(false);}
-function showHash(){setView(location.hash.replace("#","")||"home");window.scrollTo({top:0,behavior:"instant"});}
+function showHash(){setView(location.hash.replace("#","")||"home");window.scrollTo(0,0);}
 window.addEventListener("hashchange",showHash);
 document.addEventListener("keydown",function(e){if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();location.hash="search";if(active==="search")$("search-input").focus();}});
 function clock(){var d=koreanNow();$("clock").textContent=[d.getUTCHours(),d.getUTCMinutes(),d.getUTCSeconds()].map(function(n){return String(n).padStart(2,"0");}).join(":");$("clock-day").textContent=kdate(Date.now())+" KST";document.querySelectorAll("[data-count-at]").forEach(function(node){node.textContent=countdown(Number(node.dataset.countAt));});}
@@ -281,7 +281,7 @@ $("month-today").addEventListener("click",function(){var n=koreanNow();month={y:
 $("mark-seen").addEventListener("click",function(){if(!latest)return;if(write("jjung-last-read-release-v1",latest.tag_name)){$("update-message").textContent="이 브라우저에서 "+latest.tag_name+" 확인 완료로 표시했습니다.";renderReleases();}else{$("update-message").textContent="브라우저 저장이 차단되었습니다.";}}); 
 $("check-updates").addEventListener("click",function(){fetchReleases(true);});
 $("search-input").addEventListener("input",runSearch);
-$("search-filters").addEventListener("click",function(e){var b=e.target.closest("button[data-search-type]");if(!b)return;searchType=b.dataset.searchType;this.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false";});runSearch();});
+$("search-filters").addEventListener("click",function(e){var b=e.target.closest("button[data-search-type]");if(!b)return;searchType=b.dataset.searchType;this.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false");});runSearch();});
 function dataError(err){document.querySelectorAll(".view").forEach(function(s){s.hidden=false;s.replaceChildren(el("div","empty","사이트 자료를 불러올 수 없습니다. 새로고침하거나 GitHub 배포 상태를 확인해 주세요. "+String(err.message||err)));});document.querySelector(".menu").style.display="none";}
 Promise.all([
  fetch("data/portal.json",{cache:"no-cache"}).then(function(r){if(!r.ok)throw Error("portal HTTP "+r.status);return r.json();}),
