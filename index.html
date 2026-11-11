@@ -25,7 +25,7 @@
     .notice-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.notice{padding:27px;border-radius:18px;background:#101b2c;border:1px solid var(--stroke)}.notice strong{font-size:16px}.notice p{font-size:13px;color:#a0b1c9;line-height:1.85;margin:10px 0 0}.tag{font-size:10px;color:#9de8d4;background:#183c37;padding:5px 8px;border-radius:6px;font-weight:800;display:inline-block;margin-bottom:13px}
     .info-box{border:1px dashed #34506b;border-radius:18px;padding:26px 28px;display:flex;gap:18px;align-items:start;background:rgba(15,27,44,.6)}.info-icon{font-size:24px}.info-box h3{margin:0;font-size:16px}.info-box p{color:#9caec6;font-size:13px;line-height:1.9;margin:8px 0 0}
     footer{border-top:1px solid #1e2b3d;padding:35px 0 44px;margin-top:45px}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer-inner p{font-size:12px;color:#8194ad;margin:5px 0}.footer-links{display:flex;gap:20px;font-size:12px;color:#a0b3ca}
-    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:67px 0 45px;gap:40px}.window{max-width:520px;transform:none}.feature-grid{grid-template-columns:1fr 1fr}.top{height:72px}nav{gap:13px}nav a.nav-hide{display:none}.container{width:min(100% - 30px,1100px)}.section{padding:43px 0}}
+    .tool-link{color:#84d6e9;font-weight:800}.tool-link:hover{text-decoration:underline;color:#a0efd4}@media(max-width:800px){.hero{grid-template-columns:1fr;padding:67px 0 45px;gap:40px}.window{max-width:520px;transform:none}.feature-grid{grid-template-columns:1fr 1fr}.top{height:72px}nav{gap:13px}nav a.nav-hide{display:none}.container{width:min(100% - 30px,1100px)}.section{padding:43px 0}}
     @media(max-width:550px){.hero h1{font-size:45px}.lead{font-size:15px}.feature-grid,.notice-grid{grid-template-columns:1fr}.section-head{display:block}.section-head .link{display:inline-block;margin-top:14px}.download-panel{grid-template-columns:1fr;padding:24px}.download-side{align-items:stretch}.download-side .btn{width:100%}.download-side small{text-align:center}.logo{font-size:20px}.nav-cta{padding:10px 12px}.release{gap:10px;padding:15px}.window{border-radius:18px}footer{margin-top:20px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
   </style>
@@ -35,7 +35,7 @@
   <div class="container bar">
     <a class="logo" href="#top" aria-label="쭝터기 첫 화면"><span class="mark">쭝</span><span>쭝터기<small>AION2 PVP UTILITY</small></span></a>
     <nav aria-label="주 메뉴">
-      <a class="nav-hide" href="#features">주요 기능</a>
+      <a class="nav-hide" href="#features">주요 기능</a><a class="nav-schedule" href="schedule.html">일정</a><a class="nav-hide" href="records.html">내 기록</a><a class="nav-hide" href="feedback.html">문의</a>
       <a class="nav-hide" href="#updates">업데이트</a>
       <a class="nav-hide" href="#notice">공지사항</a>
       <a class="nav-cta" href="#download">다운로드 ↗</a>
@@ -50,7 +50,7 @@
       <p class="lead">쭝터기는 아이온2 PvP 플레이를 돕는 Windows 유틸리티입니다. 최근 교전, 상대 정보 조회, RP 통계를 하나의 화면에서 확인하세요.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" id="hero-download" href="https://github.com/sunwoqdno/jjungteogi-updates/releases" rel="noopener noreferrer">↓ 최신 버전 다운로드</a>
-        <a class="btn btn-secondary" href="#features">기능 둘러보기 →</a>
+        <a class="btn btn-secondary" href="#features">기능 둘러보기 →</a><a class="btn btn-secondary" href="schedule.html">어비스 일정 ↗</a>
       </div>
       <div class="meta"><span>Windows 64-bit</span><span>무료 배포</span><span>한국 서버 기준</span></div>
     </div>
@@ -75,6 +75,16 @@
       </div>
     </div>
   </section>
+  <section id="webtools" class="section">
+    <div class="container">
+      <div class="section-head"><div><div class="kicker">WEB TOOLS · LIVE</div><h2>홈페이지에서 바로 사용하세요</h2><p class="sub">설치 없이 사용할 수 있는 어비스 일정과 개인 기록 도구입니다.</p></div></div>
+      <div class="feature-grid">
+        <article class="card"><div class="card-ico">⏱</div><h3>어비스 일정·매칭표</h3><p>11월 11일 패치 기준 21개 그룹, 서버별 점령전 시각, 카이라·아그로 및 이벤트 카운트다운.</p><p style="margin-top:15px"><a class="tool-link" href="schedule.html">서버 일정 확인 ↗</a></p></article>
+        <article class="card"><div class="card-ico">▥</div><h3>내 PvP 기록장</h3><p>교전 결과와 RP를 브라우저에 직접 기록하고 7일 추이를 확인하세요. 서버 전송 없이 로컬 저장합니다.</p><p style="margin-top:15px"><a class="tool-link" href="records.html">내 기록 열기 ↗</a></p></article>
+        <article class="card"><div class="card-ico">✎</div><h3>오류 신고·기능 제안</h3><p>프로그램 오류, 새 기능 요청, 매칭·시간표 정정 제보를 GitHub Issues로 접수합니다.</p><p style="margin-top:15px"><a class="tool-link" href="feedback.html">제보 작성 ↗</a></p></article>
+      </div>
+    </div>
+  </section>
   <section id="download" class="section">
     <div class="container">
       <div class="section-head"><div><div class="kicker">DOWNLOAD</div><h2>쭝터기 다운로드</h2><p class="sub">공식 GitHub Releases에 게시된 파일을 제공합니다.</p></div></div>
@@ -90,6 +100,16 @@
       <div class="changelog" id="release-list" aria-live="polite"><div class="release"><div><strong>릴리스 정보를 불러오는 중입니다.</strong><small>잠시 후 목록이 표시됩니다.</small></div></div></div>
     </div>
   </section>
+  <section id="gamepatch" class="section">
+    <div class="container">
+      <div class="section-head"><div><div class="kicker">AION2 · KR PATCH</div><h2>11월 11일 게임 패치 핵심 변경</h2><p class="sub">서버 리매칭과 PvP 시간 변경 · 2026.11.11 패치 기준</p></div><a class="link" href="https://aion2.plaync.com/ko-kr/board/update/list" target="_blank" rel="noopener noreferrer">공식 업데이트 보기 ↗</a></div>
+      <div class="notice-grid">
+        <article class="notice"><span class="tag">서버 매칭</span><br><strong>어비스 21개 그룹 재편</strong><p>내 서버를 선택하면 상대 서버와 점령전(수·토) 및 수호신장 나흐마(금·일)의 그룹별 시간을 확인할 수 있습니다. <a class="tool-link" href="schedule.html">21개 그룹 조회 ↗</a></p></article>
+        <article class="notice"><span class="tag">시간 변경</span><br><strong>점령전 22:00 / 22:30 / 23:00</strong><p>감시자 카이라는 01:00·09:00·13:00·21:00으로 변경됐으며, 점령전 직후 일부 보스가 삭제됐습니다. <a class="tool-link" href="schedule.html">카운트다운 보기 ↗</a></p></article>
+      </div>
+      <p style="color:#8fa5be;font-size:12px;line-height:1.8;margin-top:12px">자료: <a class="tool-link" href="https://www.inven.co.kr/board/aion2/6388/295057" target="_blank" rel="noopener noreferrer">11월 11일 패치노트 게재본 ↗</a> · 일정은 실시간 서버 상태가 아닌 예정 시각입니다.</p>
+    </div>
+  </section>
   <section id="notice" class="section">
     <div class="container">
       <div class="section-head"><div><div class="kicker">NOTICE</div><h2>운영 안내</h2><p class="sub">공식 소식과 이용 시 참고사항입니다.</p></div></div>
@@ -101,14 +121,14 @@
   </section>
   <section id="coming" class="section">
     <div class="container">
-      <div class="info-box"><div class="info-icon">◇</div><div><h3>추가 기능 준비 중</h3><p>아이온2 한국 서버 매칭표, 공개 가능한 익명 이용 통계, 개발 소식은 자료 정확도와 개인정보 보호를 검증한 뒤 순차적으로 제공할 예정입니다. 확인되지 않은 일정이나 관리자 통계는 공개하지 않습니다.</p></div></div>
+      <div class="info-box"><div class="info-icon">◇</div><div><h3>추가 기능 준비 중</h3><p>서버 매칭표와 이벤트 시간표는 별도 도구 페이지에서 제공됩니다. 프로그램과 개인 PvP 기록의 자동 동기화, 공개 통계, 상대 장비 검색은 데이터 정확도와 개인정보 보호를 검증한 뒤에만 추가합니다. 관리자 통계는 공개하지 않습니다.</p></div></div>
     </div>
   </section>
 </main>
 <footer>
   <div class="container footer-inner">
     <div><div class="logo" style="font-size:17px;gap:8px"><span class="mark" style="width:31px;height:31px;font-size:17px;border-radius:9px">쭝</span>쭝터기</div><p>비공식 아이온2 PvP 유틸리티 · 게임 운영사와 무관한 독립 프로젝트</p><p>© 2026 Jjungteogi.</p></div>
-    <div class="footer-links"><a href="https://github.com/sunwoqdno/jjungteogi-updates" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://github.com/sunwoqdno/jjungteogi-updates/releases" target="_blank" rel="noopener noreferrer">Releases</a><a href="#top">맨 위로 ↑</a></div>
+    <div class="footer-links"><a href="schedule.html">어비스 일정</a><a href="records.html">내 기록</a><a href="feedback.html">문의</a><a href="https://github.com/sunwoqdno/jjungteogi-updates" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://github.com/sunwoqdno/jjungteogi-updates/releases" target="_blank" rel="noopener noreferrer">Releases</a><a href="#top">맨 위로 ↑</a></div>
   </div>
 </footer>
 <script>
