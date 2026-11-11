@@ -35,7 +35,7 @@
   <div class="container bar">
     <a class="logo" href="#top" aria-label="쭝터기 첫 화면"><span class="mark">쭝</span><span>쭝터기<small>AION2 PVP UTILITY</small></span></a>
     <nav aria-label="주 메뉴">
-      <a class="nav-hide" href="#features">주요 기능</a><a class="nav-schedule" href="schedule.html">일정</a><a class="nav-hide" href="records.html">내 기록</a><a class="nav-hide" href="feedback.html">문의</a>
+      <a class="nav-hide" href="#features">주요 기능</a><a class="nav-schedule" href="hub.html#home">통합 허브</a><a class="nav-hide" href="schedule.html">일정</a><a class="nav-hide" href="records.html">내 기록</a><a class="nav-hide" href="feedback.html">문의</a>
       <a class="nav-hide" href="#updates">업데이트</a>
       <a class="nav-hide" href="#notice">공지사항</a>
       <a class="nav-cta" href="#download">다운로드 ↗</a>
@@ -50,7 +50,7 @@
       <p class="lead">쭝터기는 아이온2 PvP 플레이를 돕는 Windows 유틸리티입니다. 최근 교전, 상대 정보 조회, RP 통계를 하나의 화면에서 확인하세요.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" id="hero-download" href="https://github.com/sunwoqdno/jjungteogi-updates/releases" rel="noopener noreferrer">↓ 최신 버전 다운로드</a>
-        <a class="btn btn-secondary" href="#features">기능 둘러보기 →</a><a class="btn btn-secondary" href="schedule.html">어비스 일정 ↗</a>
+        <a class="btn btn-secondary" href="hub.html#home">내 서버 홈 ↗</a><a class="btn btn-secondary" href="schedule.html">어비스 일정 ↗</a>
       </div>
       <div class="meta"><span>Windows 64-bit</span><span>무료 배포</span><span>한국 서버 기준</span></div>
     </div>
@@ -75,7 +75,20 @@
       </div>
     </div>
   </section>
-  <section id="webtools" class="section">
+  <section id="portal" class="section">
+  <div class="container">
+    <div class="section-head"><div><div class="kicker">WEB UTILITIES · v0.3</div><h2>게임을 켜기 전, 쭝터기 허브</h2><p class="sub">내 서버를 기억하고 보상·패치·일정을 한눈에 확인하세요. 여섯 기능을 하나로 연결했습니다.</p></div><a class="link" href="hub.html#home">통합 허브 열기 ↗</a></div>
+    <div class="feature-grid">
+      <article class="card"><div class="card-ico">⌂</div><h3>내 서버 전용 홈</h3><p>서버 선택을 저장하고 매칭 상대와 다음 점령전·주요 마감을 바로 확인합니다.</p><p style="margin-top:13px"><a class="tool-link" href="hub.html#home">서버 홈 열기 ↗</a></p></article>
+      <article class="card"><div class="card-ico">◇</div><h3>쿠폰·보상 센터</h3><p>공식 쿠폰 복사, 개인 발급형 링크, 1주년 보상 만료일 및 사용 체크.</p><p style="margin-top:13px"><a class="tool-link" href="hub.html#rewards">쿠폰 확인 ↗</a></p></article>
+      <article class="card"><div class="card-ico">≋</div><h3>패치 전후 비교</h3><p>PvP·어비스·장비 변경을 이전/이후로 비교하고 공식 업데이트 출처를 확인합니다.</p><p style="margin-top:13px"><a class="tool-link" href="hub.html#patches">변경점 비교 ↗</a></p></article>
+      <article class="card"><div class="card-ico">▦</div><h3>시즌·점검 달력</h3><p>서버 이전 예고, 시즌 5 전환, 보상 마감 날짜를 월별로 관리합니다.</p><p style="margin-top:13px"><a class="tool-link" href="hub.html#calendar">달력 보기 ↗</a></p></article>
+      <article class="card"><div class="card-ico">↑</div><h3>업데이트 알림 센터</h3><p>GitHub 최신 안정 버전을 조회하고 내가 확인한 버전과 비교해 표시합니다.</p><p style="margin-top:13px"><a class="tool-link" href="hub.html#updates">새 버전 확인 ↗</a></p></article>
+      <article class="card"><div class="card-ico">⌕</div><h3>통합 검색</h3><p>서버 42개, 쿠폰, 패치, 시즌 일정과 사이트 메뉴를 한 번에 검색합니다.</p><p style="margin-top:13px"><a class="tool-link" href="hub.html#search">검색 열기 ↗</a></p></article>
+    </div>
+  </div>
+</section>
+<section id="webtools" class="section">
     <div class="container">
       <div class="section-head"><div><div class="kicker">WEB TOOLS · LIVE</div><h2>홈페이지에서 바로 사용하세요</h2><p class="sub">설치 없이 사용할 수 있는 어비스 일정과 개인 기록 도구입니다.</p></div></div>
       <div class="feature-grid">
@@ -121,14 +134,14 @@
   </section>
   <section id="coming" class="section">
     <div class="container">
-      <div class="info-box"><div class="info-icon">◇</div><div><h3>추가 기능 준비 중</h3><p>서버 매칭표와 이벤트 시간표는 별도 도구 페이지에서 제공됩니다. 프로그램과 개인 PvP 기록의 자동 동기화, 공개 통계, 상대 장비 검색은 데이터 정확도와 개인정보 보호를 검증한 뒤에만 추가합니다. 관리자 통계는 공개하지 않습니다.</p></div></div>
+      <div class="info-box"><div class="info-icon">◇</div><div><h3>추가 기능 준비 중</h3><p>통합 허브에는 서버별 홈·쿠폰·패치 비교·시즌 달력·업데이트 확인·검색이 추가됐습니다. 프로그램과 개인 PvP 기록의 자동 동기화, 공개 통계, 상대 장비 검색은 데이터 정확도와 개인정보 보호를 검증한 뒤에만 추가합니다. 관리자 통계는 공개하지 않습니다.</p></div></div>
     </div>
   </section>
 </main>
 <footer>
   <div class="container footer-inner">
     <div><div class="logo" style="font-size:17px;gap:8px"><span class="mark" style="width:31px;height:31px;font-size:17px;border-radius:9px">쭝</span>쭝터기</div><p>비공식 아이온2 PvP 유틸리티 · 게임 운영사와 무관한 독립 프로젝트</p><p>© 2026 Jjungteogi.</p></div>
-    <div class="footer-links"><a href="privacy.html">개인정보 안내</a><a href="schedule.html">어비스 일정</a><a href="records.html">내 기록</a><a href="feedback.html">문의</a><a href="https://github.com/sunwoqdno/jjungteogi-updates" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://github.com/sunwoqdno/jjungteogi-updates/releases" target="_blank" rel="noopener noreferrer">Releases</a><a href="#top">맨 위로 ↑</a></div>
+    <div class="footer-links"><a href="hub.html#home">통합 허브</a><a href="privacy.html">개인정보 안내</a><a href="schedule.html">어비스 일정</a><a href="records.html">내 기록</a><a href="feedback.html">문의</a><a href="https://github.com/sunwoqdno/jjungteogi-updates" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://github.com/sunwoqdno/jjungteogi-updates/releases" target="_blank" rel="noopener noreferrer">Releases</a><a href="#top">맨 위로 ↑</a></div>
   </div>
 </footer>
 <script>
