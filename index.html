@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#080d18">
+  <meta name="description" content="쭝터기 — 아이온2 한국 서버 PvP 유틸리티. 최신 버전 다운로드와 업데이트 내역.">
+  <meta property="og:title" content="쭝터기 | AION2 PvP Utility">
+  <meta property="og:description" content="교전 기록 · 상대 정보 · RP 통계. 쭝터기의 최신 버전과 개발 소식.">
+  <meta property="og:type" content="website">
+  <title>쭝터기 | AION2 PvP Utility</title>
+  <style>
+    :root{font-family:Inter,Pretendard,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;color-scheme:dark;--bg:#080d18;--panel:#111b2c;--panel2:#152238;--stroke:#27364b;--muted:#98a9c3;--white:#f5f8ff;--mint:#71e1c0;--blue:#78a9fa}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 760px 470px at 85% 0%,rgba(32,90,146,.18),transparent 75%),radial-gradient(ellipse 650px 600px at 8% 17%,rgba(23,100,95,.12),transparent 74%),var(--bg);color:var(--white);min-height:100vh}
+    a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:2px solid var(--mint);outline-offset:4px}.container{width:min(1100px,calc(100% - 44px));margin:auto}
+    .top{height:82px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(8,13,24,.67);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);position:sticky;top:0;z-index:20}
+    .bar{height:100%;display:flex;align-items:center;justify-content:space-between;gap:22px}.logo{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.04em;font-size:23px}.mark{width:41px;height:41px;border-radius:13px;background:linear-gradient(135deg,#1d957e,#317dc5);display:grid;place-items:center;font-size:23px;color:white;box-shadow:0 0 25px rgba(38,173,153,.15)}.logo small{font-weight:600;letter-spacing:.09em;color:var(--muted);font-size:10px;display:block;margin-top:2px}
+    nav{display:flex;align-items:center;gap:27px;color:#b5c2d8;font-weight:600;font-size:14px}nav a:hover,.link:hover{color:var(--mint)}.nav-cta{border:1px solid var(--stroke);padding:11px 17px;border-radius:12px;color:#e9f2ff;white-space:nowrap}
+    .hero{padding:92px 0 78px;display:grid;grid-template-columns:1.14fr .86fr;align-items:center;gap:45px}.eyebrow{font-size:12px;letter-spacing:.18em;font-weight:800;color:var(--mint);text-transform:uppercase}.hero h1{font-size:clamp(44px,6vw,75px);letter-spacing:-.075em;line-height:1.12;margin:18px 0 21px}.hero h1 span{background:linear-gradient(100deg,#7ceac9 5%,#86b5fd 94%);background-clip:text;-webkit-background-clip:text;color:transparent}.lead{font-size:17px;line-height:1.9;color:#adbcd2;max-width:590px;word-break:keep-all;margin:0}.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:29px}.btn{border-radius:13px;padding:15px 21px;display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:14px;font-weight:800;cursor:pointer;border:1px solid var(--stroke);transition:transform .15s,background .15s}.btn:hover{transform:translateY(-2px)}.btn-primary{border-color:#67cfb4;color:#06211d;background:linear-gradient(110deg,#70e6c1,#85c0fa);box-shadow:0 12px 40px rgba(74,189,170,.17)}.btn-secondary{background:#152033;color:#d8e5f8}.meta{display:flex;flex-wrap:wrap;gap:12px;color:#849ab8;font-size:12px;margin-top:21px}.meta span+span:before{content:"•";padding-right:12px;color:#5e7189}
+    .window{border:1px solid #30415a;border-radius:24px;background:linear-gradient(145deg,rgba(25,43,66,.96),rgba(14,24,40,.98));box-shadow:0 30px 90px #0008,0 0 0 8px rgba(255,255,255,.015);overflow:hidden;transform:rotate(1deg)}.window-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #2a3a50;padding:16px 20px}.dots{display:flex;gap:6px}.dots i{display:block;width:8px;height:8px;border-radius:50%;background:#43546b}.window-title{font-weight:800;color:#ccd9eb;font-size:12px;letter-spacing:.04em}.live-pill{font-size:11px;font-weight:700;background:#183b36;color:#85e7cb;padding:6px 10px;border-radius:100px}.preview{padding:20px}.mini-row{background:#111d30;border:1px solid #2b3d56;padding:15px;border-radius:13px;margin-bottom:11px;display:flex;gap:11px;align-items:center}.avatar{width:37px;height:37px;display:grid;place-items:center;flex:0 0 auto;border-radius:10px;color:#e1eeff;background:#2a4563;font-weight:900}.avatar.a2{background:#164940;color:#8debd0}.avatar.a3{background:#443453;color:#edd2f5}.mini-content{min-width:0;flex:1}.mini-title{font-size:13px;font-weight:800}.mini-sub{font-size:11px;color:#91a5bf;margin-top:4px}.mini-right{color:#b0d8f9;font-weight:800;font-size:12px}.mock-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin-top:16px}.mock-stat{border:1px solid #2b3e55;background:#13233a;border-radius:13px;padding:16px}.mock-stat strong{font-size:22px}.mock-stat span{display:block;font-size:11px;color:#9bb1cb;margin-top:7px}.preview-note{margin:12px 0 0;color:#7e92ab;font-size:10px;text-align:right}
+    section{scroll-margin-top:106px}.section{padding:62px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:26px}.kicker{color:var(--mint);font-size:12px;font-weight:800;letter-spacing:.13em}.section h2{font-size:clamp(27px,3vw,35px);letter-spacing:-.05em;margin:8px 0 0}.section p.sub{color:var(--muted);font-size:14px;line-height:1.8;margin:9px 0 0}.link{color:#b4c5dc;font-size:13px;font-weight:700}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(145deg,rgba(20,34,52,.95),rgba(13,23,38,.96));border:1px solid var(--stroke);border-radius:19px;padding:25px}.card-ico{width:44px;height:44px;border-radius:13px;background:#183b44;color:#90ead2;display:grid;place-items:center;font-size:22px}.card h3{margin:18px 0 9px;font-size:17px;letter-spacing:-.03em}.card p{margin:0;font-size:13px;color:#9dadc7;line-height:1.8;word-break:keep-all}
+    .download-panel{display:grid;grid-template-columns:1fr auto;align-items:center;gap:22px;border:1px solid #356258;background:linear-gradient(115deg,rgba(24,71,64,.65),rgba(23,43,69,.75));border-radius:21px;padding:28px 30px}.download-panel h3{font-size:23px;letter-spacing:-.04em;margin:4px 0 7px}.download-panel p{font-size:13px;color:#a8c8c9;margin:0;line-height:1.7}.version{font-size:12px;color:#8be5ca;font-weight:800}.download-side{display:flex;flex-direction:column;align-items:end;gap:8px}.download-side small{font-size:11px;color:#9bb9bc}.changelog{display:grid;gap:10px;margin-top:18px}.release{border:1px solid #27384d;background:rgba(17,28,45,.82);border-radius:14px;padding:17px 20px;display:flex;gap:18px;justify-content:space-between;align-items:center}.release strong{display:block;font-size:14px}.release small{font-size:11px;color:#91a5bd;display:block;margin-top:6px}.release a{font-size:12px;color:#8fcefa;font-weight:700;white-space:nowrap}.release a:hover{text-decoration:underline}
+    .notice-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.notice{padding:27px;border-radius:18px;background:#101b2c;border:1px solid var(--stroke)}.notice strong{font-size:16px}.notice p{font-size:13px;color:#a0b1c9;line-height:1.85;margin:10px 0 0}.tag{font-size:10px;color:#9de8d4;background:#183c37;padding:5px 8px;border-radius:6px;font-weight:800;display:inline-block;margin-bottom:13px}
+    .info-box{border:1px dashed #34506b;border-radius:18px;padding:26px 28px;display:flex;gap:18px;align-items:start;background:rgba(15,27,44,.6)}.info-icon{font-size:24px}.info-box h3{margin:0;font-size:16px}.info-box p{color:#9caec6;font-size:13px;line-height:1.9;margin:8px 0 0}
+    footer{border-top:1px solid #1e2b3d;padding:35px 0 44px;margin-top:45px}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer-inner p{font-size:12px;color:#8194ad;margin:5px 0}.footer-links{display:flex;gap:20px;font-size:12px;color:#a0b3ca}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:67px 0 45px;gap:40px}.window{max-width:520px;transform:none}.feature-grid{grid-template-columns:1fr 1fr}.top{height:72px}nav{gap:13px}nav a.nav-hide{display:none}.container{width:min(100% - 30px,1100px)}.section{padding:43px 0}}
+    @media(max-width:550px){.hero h1{font-size:45px}.lead{font-size:15px}.feature-grid,.notice-grid{grid-template-columns:1fr}.section-head{display:block}.section-head .link{display:inline-block;margin-top:14px}.download-panel{grid-template-columns:1fr;padding:24px}.download-side{align-items:stretch}.download-side .btn{width:100%}.download-side small{text-align:center}.logo{font-size:20px}.nav-cta{padding:10px 12px}.release{gap:10px;padding:15px}.window{border-radius:18px}footer{margin-top:20px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+  </style>
+</head>
+<body>
+<header class="top">
+  <div class="container bar">
+    <a class="logo" href="#top" aria-label="쭝터기 첫 화면"><span class="mark">쭝</span><span>쭝터기<small>AION2 PVP UTILITY</small></span></a>
+    <nav aria-label="주 메뉴">
+      <a class="nav-hide" href="#features">주요 기능</a>
+      <a class="nav-hide" href="#updates">업데이트</a>
+      <a class="nav-hide" href="#notice">공지사항</a>
+      <a class="nav-cta" href="#download">다운로드 ↗</a>
+    </nav>
+  </div>
+</header>
+<main id="top">
+  <div class="container hero">
+    <div>
+      <div class="eyebrow">AION2 · KOREA SERVER · PVP TOOL</div>
+      <h1>전투의 순간을<br><span>더 선명하게.</span></h1>
+      <p class="lead">쭝터기는 아이온2 PvP 플레이를 돕는 Windows 유틸리티입니다. 최근 교전, 상대 정보 조회, RP 통계를 하나의 화면에서 확인하세요.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" id="hero-download" href="https://github.com/sunwoqdno/jjungteogi-updates/releases" rel="noopener noreferrer">↓ 최신 버전 다운로드</a>
+        <a class="btn btn-secondary" href="#features">기능 둘러보기 →</a>
+      </div>
+      <div class="meta"><span>Windows 64-bit</span><span>무료 배포</span><span>한국 서버 기준</span></div>
+    </div>
+    <div class="window" role="img" aria-label="쭝터기 프로그램 정보 카드의 예시 화면. 실제 실행 화면이 아닙니다.">
+      <div class="window-head"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">JJUNGTEOGI · PVP</span><span class="live-pill">UI Preview</span></div>
+      <div class="preview">
+        <div class="mini-row"><span class="avatar a2">P</span><span class="mini-content"><span class="mini-title">교전 정보</span><span class="mini-sub">상대 정보 · 장비 구성</span></span><span class="mini-right">조회</span></div>
+        <div class="mini-row"><span class="avatar">R</span><span class="mini-content"><span class="mini-title">최근 교전 기록</span><span class="mini-sub">전투 이력 정리</span></span><span class="mini-right">기록</span></div>
+        <div class="mini-row"><span class="avatar a3">S</span><span class="mini-content"><span class="mini-title">상대 장비 분석</span><span class="mini-sub">장비 세트와 특성 정보</span></span><span class="mini-right">분석</span></div>
+        <div class="mock-stats"><div class="mock-stat"><strong>1H RP</strong><span>최근 1시간 기록</span></div><div class="mock-stat"><strong>TODAY RP</strong><span>오늘 누적 기록</span></div></div>
+        <p class="preview-note">※ 기능 소개를 위한 개념 이미지이며 실제 측정값이 아닙니다.</p>
+      </div>
+    </div>
+  </div>
+  <section id="features" class="section">
+    <div class="container">
+      <div class="section-head"><div><div class="kicker">FEATURES</div><h2>PvP에 집중하는 기능</h2><p class="sub">전투 중 필요한 정보를 빠르게 확인하는 데 집중합니다.</p></div></div>
+      <div class="feature-grid">
+        <article class="card"><div class="card-ico">⚔</div><h3>최근 교전 기록</h3><p>교전 상대와 전투 이력을 확인하고, 여러 상대가 등장한 교전을 한눈에 정리합니다.</p></article>
+        <article class="card"><div class="card-ico">◈</div><h3>장비·세팅 조회</h3><p>상대 장비 및 세트 효과 정보를 조회합니다. 게임 데이터 상황에 따라 조회 결과가 달라질 수 있습니다.</p></article>
+        <article class="card"><div class="card-ico">▥</div><h3>RP · 어비스 통계</h3><p>1시간·오늘 RP 추이와 주간 어비스 포인트 등 주요 정보를 확인할 수 있습니다.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="download" class="section">
+    <div class="container">
+      <div class="section-head"><div><div class="kicker">DOWNLOAD</div><h2>쭝터기 다운로드</h2><p class="sub">공식 GitHub Releases에 게시된 파일을 제공합니다.</p></div></div>
+      <div class="download-panel">
+        <div><div class="version" id="latest-version">최신 버전 확인 중…</div><h3>쭝터기 · Windows</h3><p id="latest-detail">최신 공개 배포 정보를 불러오고 있습니다.</p></div>
+        <div class="download-side"><a class="btn btn-primary" id="download-link" href="https://github.com/sunwoqdno/jjungteogi-updates/releases" rel="noopener noreferrer">↓ 다운로드</a><small id="download-size">GitHub 공식 릴리스</small></div>
+      </div>
+    </div>
+  </section>
+  <section id="updates" class="section">
+    <div class="container">
+      <div class="section-head"><div><div class="kicker">RELEASE NOTES</div><h2>업데이트 내역</h2><p class="sub">공개 GitHub 릴리스 목록에서 자동으로 불러옵니다.</p></div><a class="link" href="https://github.com/sunwoqdno/jjungteogi-updates/releases" target="_blank" rel="noopener noreferrer">전체 버전 보기 ↗</a></div>
+      <div class="changelog" id="release-list" aria-live="polite"><div class="release"><div><strong>릴리스 정보를 불러오는 중입니다.</strong><small>잠시 후 목록이 표시됩니다.</small></div></div></div>
+    </div>
+  </section>
+  <section id="notice" class="section">
+    <div class="container">
+      <div class="section-head"><div><div class="kicker">NOTICE</div><h2>운영 안내</h2><p class="sub">공식 소식과 이용 시 참고사항입니다.</p></div></div>
+      <div class="notice-grid">
+        <article class="notice"><span class="tag">공지</span><br><strong>프로그램은 무료로 제공됩니다</strong><p>이 홈페이지는 공식 다운로드와 업데이트 내역을 안내합니다. 결제나 별도의 유료 계정 생성은 요구하지 않습니다.</p></article>
+        <article class="notice"><span class="tag">안내</span><br><strong>게임 데이터 변동 안내</strong><p>게임 패치나 서버 상태에 따라 장비 조회, 전투 기록, 일정 정보의 동작 및 정확도가 달라질 수 있습니다.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="coming" class="section">
+    <div class="container">
+      <div class="info-box"><div class="info-icon">◇</div><div><h3>추가 기능 준비 중</h3><p>아이온2 한국 서버 매칭표, 공개 가능한 익명 이용 통계, 개발 소식은 자료 정확도와 개인정보 보호를 검증한 뒤 순차적으로 제공할 예정입니다. 확인되지 않은 일정이나 관리자 통계는 공개하지 않습니다.</p></div></div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container footer-inner">
+    <div><div class="logo" style="font-size:17px;gap:8px"><span class="mark" style="width:31px;height:31px;font-size:17px;border-radius:9px">쭝</span>쭝터기</div><p>비공식 아이온2 PvP 유틸리티 · 게임 운영사와 무관한 독립 프로젝트</p><p>© 2026 Jjungteogi.</p></div>
+    <div class="footer-links"><a href="https://github.com/sunwoqdno/jjungteogi-updates" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://github.com/sunwoqdno/jjungteogi-updates/releases" target="_blank" rel="noopener noreferrer">Releases</a><a href="#top">맨 위로 ↑</a></div>
+  </div>
+</footer>
+<script>
+(function(){
+  "use strict";
+  var owner="sunwoqdno", repo="jjungteogi-updates";
+  var api="https://api.github.com/repos/"+owner+"/"+repo+"/releases?per_page=10";
+  var defaultUrl="https://github.com/"+owner+"/"+repo+"/releases";
+  function el(id){return document.getElementById(id);}
+  function humanBytes(num){if(typeof num!=="number"||num<=0)return "GitHub 공식 릴리스";return (num/1048576).toFixed(1)+" MB";}
+  function fmtDate(s){var d=new Date(s);return isNaN(d.valueOf())?"공개일 미확인":new Intl.DateTimeFormat("ko-KR",{year:"numeric",month:"2-digit",day:"2-digit",timeZone:"Asia/Seoul"}).format(d);}
+  function text(tag,cls,value){var node=document.createElement(tag);if(cls)node.className=cls;node.textContent=value;return node;}
+  function render(data){
+    var all=data.filter(function(r){return r&&!r.draft&&r.tag_name;});
+    var stable=all.filter(function(r){return !r.prerelease;});
+    var latest=stable[0]||all[0];
+    if(!latest)throw Error("릴리스가 없습니다");
+    var binary=(latest.assets||[]).find(function(a){return /\.exe$/i.test(a.name||"");});
+    var link=binary&&binary.browser_download_url?binary.browser_download_url:(latest.html_url||defaultUrl);
+    el("latest-version").textContent="LATEST · "+(latest.tag_name||"");
+    el("latest-detail").textContent="공개일 "+fmtDate(latest.published_at||latest.created_at)+" · 최신 안정 배포판";
+    el("download-link").href=link;
+    el("hero-download").href=link;
+    el("download-size").textContent=binary?humanBytes(binary.size):"릴리스 페이지에서 파일 확인";
+    var list=el("release-list");list.replaceChildren();
+    all.slice(0,6).forEach(function(r){
+      var row=text("article","release","");
+      var info=document.createElement("div");info.appendChild(text("strong","",r.tag_name+(r.prerelease?" · 테스트":"")));
+      info.appendChild(text("small","",fmtDate(r.published_at||r.created_at)+(r.body?" · 상세 내용은 GitHub에서 확인하세요":"")));
+      var a=text("a","","변경 내역 ↗");a.href=r.html_url||defaultUrl;a.target="_blank";a.rel="noopener noreferrer";
+      row.appendChild(info);row.appendChild(a);list.appendChild(row);
+    });
+  }
+  function fail(){
+    el("latest-version").textContent="GitHub Releases";
+    el("latest-detail").textContent="자동 조회가 지연되고 있습니다. 릴리스 페이지에서 최신 버전을 확인하세요.";
+    el("download-link").href=defaultUrl;el("hero-download").href=defaultUrl;
+    el("download-size").textContent="릴리스 페이지에서 직접 확인";
+    var list=el("release-list");list.replaceChildren();
+    var row=text("div","release","");var box=document.createElement("div");box.appendChild(text("strong","","현재 업데이트 목록을 불러올 수 없습니다."));box.appendChild(text("small","","GitHub 공식 릴리스 페이지에서 확인하세요."));
+    var a=text("a","","버전 보기 ↗");a.href=defaultUrl;a.target="_blank";a.rel="noopener noreferrer";row.append(box,a);list.append(row);
+  }
+  try{
+    var cached=window.sessionStorage.getItem("jjung-releases");
+    if(cached){var value=JSON.parse(cached);if(Date.now()-value.time<600000){render(value.data);return;}}
+  }catch(e){}
+  fetch(api,{headers:{"Accept":"application/vnd.github+json"}})
+    .then(function(resp){if(!resp.ok)throw Error("GitHub API "+resp.status);return resp.json();})
+    .then(function(data){if(!Array.isArray(data))throw Error("Invalid data");render(data);try{window.sessionStorage.setItem("jjung-releases",JSON.stringify({time:Date.now(),data:data}));}catch(e){}})
+    .catch(fail);
+})();
+</script>
+</body>
+</html>
