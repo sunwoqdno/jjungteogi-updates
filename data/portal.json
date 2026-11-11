@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 1,
+  "published": "2026-11-11",
+  "region": "ko-KR",
+  "timezone": "Asia/Seoul",
+  "sources": {
+    "anniversary": "https://aion2.plaync.com/ko-kr/conts/261108_update",
+    "patch": "https://m.inven.co.kr/board/aion2/6388/295057?category=%EC%86%8C%EC%8B%9D",
+    "coupon": "https://lounge.plaync.com/feed/86800?country=KR&locale=ko-KR",
+    "growth": "https://aion2.plaync.com/ko-kr/promo/261111_boost",
+    "news": "https://aion2.plaync.com/ko-kr/board/update/list"
+  },
+  "rewards": [
+    {
+      "id": "thankyou",
+      "title": "1주년 감사 쿠폰",
+      "kind": "code",
+      "code": "THANKYOUDAEVA",
+      "startDate": "2026-11-10",
+      "endDate": "2027-03-03",
+      "endNote": "정기점검 전",
+      "description": "공식 안내된 공통 쿠폰 코드입니다. 복사 후 게임 또는 공식 쿠폰 등록 화면에서 사용하세요.",
+      "source": "https://lounge.plaync.com/feed/86800?country=KR&locale=ko-KR",
+      "registration": "https://aion2.plaync.com/ko-kr"
+    },
+    {
+      "id": "growth-boost",
+      "title": "성장 서포트 쿠폰 발급",
+      "kind": "personal",
+      "startDate": "2026-11-11",
+      "endDate": "2027-02-24",
+      "endNote": "정기점검 전",
+      "description": "명의당 1회 개별 발급. 공통 쿠폰 번호가 아니므로 공식 페이지에서 로그인·본인 인증 후 발급하세요.",
+      "source": "https://aion2.plaync.com/ko-kr/promo/261111_boost",
+      "registration": "https://aion2.plaync.com/ko-kr/promo/261111_boost"
+    },
+    {
+      "id": "one-year-365",
+      "title": "1주년 기념 상점 365키나 상품",
+      "kind": "shop",
+      "startDate": "2026-11-11",
+      "endDate": "2026-12-02",
+      "endNote": "정기점검 전",
+      "description": "게임 내 상점 → 아틀리에 → 1주년 탭에서 기념 외형 등 상품을 365키나에 구매할 수 있습니다. 서버별 구매 제한이 있습니다.",
+      "source": "https://m.inven.co.kr/board/aion2/6388/295057?category=%EC%86%8C%EC%8B%9D",
+      "registration": "https://aion2.plaync.com/ko-kr/conts/261108_update"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "chapter1",
+      "date": "2026-11-11",
+      "title": "빛과 장막의 경계 업데이트",
+      "category": "patch",
+      "status": "confirmed",
+      "note": "챕터1 두 번째 이야기, 1주년 행사 시작",
+      "source": "https://aion2.plaync.com/ko-kr/conts/261108_update"
+    },
+    {
+      "id": "attendance-start",
+      "date": "2026-11-11",
+      "title": "챕터1 28일 출석 시작",
+      "category": "event",
+      "status": "confirmed",
+      "note": "더 높은 곳을 향하는 길 출석부",
+      "source": "https://m.inven.co.kr/board/aion2/6388/295057?category=%EC%86%8C%EC%8B%9D"
+    },
+    {
+      "id": "server-transfer",
+      "date": "2026-11-18",
+      "title": "무료 서버 이전 예정",
+      "category": "schedule",
+      "status": "announced",
+      "note": "계정당 1회로 사전 예고. 신청 조건·정확한 개시 시간은 후속 공식 공지 확인",
+      "source": "https://aion2.plaync.com/ko-kr/conts/261108_update"
+    },
+    {
+      "id": "collection-1-end",
+      "date": "2026-11-25",
+      "title": "앙코르 콜렉션 1차 판매 마감",
+      "category": "event",
+      "status": "confirmed",
+      "note": "정기점검 전 종료",
+      "source": "https://m.inven.co.kr/board/aion2/6388/295057?category=%EC%86%8C%EC%8B%9D"
+    },
+    {
+      "id": "one-year-end",
+      "date": "2026-12-02",
+      "title": "1주년 이벤트·365키나 상품 종료",
+      "category": "event",
+      "status": "confirmed",
+      "note": "욕심쟁이 슈고 대소동 포함 · 정기점검 전",
+      "source": "https://m.inven.co.kr/board/aion2/6388/295057?category=%EC%86%8C%EC%8B%9D"
+    },
+    {
+      "id": "attendance-end",
+      "date": "2026-12-16",
+      "title": "챕터1 28일 출석 이벤트 종료",
+      "category": "event",
+      "status": "confirmed",
+      "note": "정기점검 전",
+      "source": "https://m.inven.co.kr/board/aion2/6388/295057?category=%EC%86%8C%EC%8B%9D"
+    },
+    {
+      "id": "abyss-half2",
+      "date": "2026-12-23",
+      "title": "어비스 시즌 5 전반부 종료·후반부 시작",
+      "category": "season",
+      "status": "confirmed",
+      "note": "정기점검 기준으로 전·후반부 전환, 랭킹 초기화 안내",
+      "source": "https://m.inven.co.kr/board/aion2/6388/295057?category=%EC%86%8C%EC%8B%9D"
+    },
+    {
+      "id": "growth-end",
+      "date": "2027-02-24",
+      "title": "성장 서포트 쿠폰 발급·등록 종료",
+      "category": "reward",
+      "status": "confirmed",
+      "note": "정기점검 전. 발급형 쿠폰은 명의당 1회",
+      "source": "https://aion2.plaync.com/ko-kr/promo/261111_boost"
+    },
+    {
+      "id": "season5-end",
+      "date": "2027-03-03",
+      "title": "어비스 시즌 5 후반부 종료",
+      "category": "season",
+      "status": "confirmed",
+      "note": "정기점검 전",
+      "source": "https://m.inven.co.kr/board/aion2/6388/295057?category=%EC%86%8C%EC%8B%9D"
+    },
+    {
+      "id": "thankyou-end",
+      "date": "2027-03-03",
+      "title": "1주년 감사 쿠폰 사용 종료",
+      "category": "reward",
+      "status": "confirmed",
+      "note": "정기점검 전",
+      "source": "https://lounge.plaync.com/feed/86800?country=KR&locale=ko-KR"
+    },
+    {
+      "id": "growth-usage-end",
+      "date": "2027-03-03",
+      "title": "성장 서포트 이용 종료",
+      "category": "reward",
+      "status": "confirmed",
+      "note": "정기점검 전, 쿠폰 발급·등록 종료는 2월 24일",
+      "source": "https://aion2.plaync.com/ko-kr/promo/261111_boost"
+    }
+  ],
+  "patches": [
+    {
+      "date": "2026-11-11",
+      "version": "2026.11.11",
+      "name": "빛과 장막의 경계",
+      "summary": "PvP·전투 스탯, 어비스, 장비 돌파, 신규 콘텐츠 개편",
+      "source": "https://m.inven.co.kr/board/aion2/6388/295057?category=%EC%86%8C%EC%8B%9D",
+      "changes": [
+        {
+          "id": "godstat",
+          "category": "pvp",
+          "title": "주신 스탯 효율 조정",
+          "before": "1포인트당 0.2%",
+          "after": "1포인트당 0.1%",
+          "impact": "주신 스탯으로 올라가는 스탯 효율 변경",
+          "importance": "high"
+        },
+        {
+          "id": "pvpamp",
+          "category": "pvp",
+          "title": "PvP 피해 증폭 보정",
+          "before": "기존 계산 방식",
+          "after": "(피해 증폭 − 피해 내성) 격차에 따른 증폭 효율 감소 보정 추가",
+          "impact": "PvP 피해량에 영향을 주므로 기존 세팅 계산을 재검증해야 함",
+          "importance": "high"
+        },
+        {
+          "id": "arena",
+          "category": "pvp",
+          "title": "협력의 투기장 인원 변경",
+          "before": "5:5",
+          "after": "2:2",
+          "impact": "소규모 PvP 조합 환경 변화",
+          "importance": "high"
+        },
+        {
+          "id": "abysslimit",
+          "category": "abyss",
+          "title": "에레슈란타 표층 주간 이용 시간",
+          "before": "기본 7시간 / 구독 14시간",
+          "after": "기본 3시간 / 구독 6시간",
+          "impact": "주간 어비스 플레이 계획 변경",
+          "importance": "high"
+        },
+        {
+          "id": "abyssap",
+          "category": "abyss",
+          "title": "어비스 포인트 상한 도달 이후",
+          "before": "상한 이후 PvP 추가 획득 불가",
+          "after": "상한에 도달해도 PvP로 소량 추가 획득 가능",
+          "impact": "상한 도달 후 전투 보상 구조 변경",
+          "importance": "high"
+        },
+        {
+          "id": "artifact",
+          "category": "abyss",
+          "title": "아티팩트 점령전 시간(그룹 1/2/3)",
+          "before": "21:20 / 21:50 / 22:20",
+          "after": "22:00 / 22:30 / 23:00",
+          "impact": "요일 수·토 유지, 그룹별 시간 변경",
+          "importance": "high"
+        },
+        {
+          "id": "breakout-weapon",
+          "category": "gear",
+          "title": "무기·가더·장신구 돌파 효과",
+          "before": "공격력 증가",
+          "after": "피해 증폭",
+          "impact": "PVP/PVE 세팅 영향 확인 필요",
+          "importance": "high"
+        },
+        {
+          "id": "breakout-armor",
+          "category": "gear",
+          "title": "방어구 돌파 효과",
+          "before": "방어력 증가",
+          "after": "피해 내성",
+          "impact": "방어 세팅 계산 변경",
+          "importance": "high"
+        },
+        {
+          "id": "gear-blood",
+          "category": "gear",
+          "title": "혈투 어비스 장비 추가",
+          "before": "해당 신규 장비 없음",
+          "after": "혈투 장비 전 부위 추가, 천부장과 동일한 수치의 세트 효과",
+          "impact": "새로운 어비스 장비 선택지",
+          "importance": "medium"
+        },
+        {
+          "id": "dungeon-energy",
+          "category": "system",
+          "title": "원정 오드 에너지 소모",
+          "before": "콘텐츠별 기존 소모량",
+          "after": "모든 원정 소모량 60으로 조정",
+          "impact": "주간 오드 사용 계획 재검토",
+          "importance": "medium"
+        },
+        {
+          "id": "awakening",
+          "category": "system",
+          "title": "각성전 기본 주간 도전 횟수",
+          "before": "3회",
+          "after": "9회",
+          "impact": "도전 횟수는 캐릭터 단위에서 서버 단위 공유로 변경",
+          "importance": "medium"
+        }
+      ]
+    }
+  ],
+  "searchPages": [
+    {
+      "id": "home",
+      "title": "쭝터기 공식 홈페이지",
+      "keywords": "홈 다운로드 프로그램",
+      "url": "./",
+      "category": "페이지"
+    },
+    {
+      "id": "dashboard",
+      "title": "내 서버 전용 홈",
+      "keywords": "서버 대시보드 네자칸 시엘 이스라펠",
+      "url": "hub.html#home",
+      "category": "페이지"
+    },
+    {
+      "id": "abyss",
+      "title": "어비스 일정·매칭표",
+      "keywords": "점령전 나흐마 카이라 아그로 시공 아웃랜드",
+      "url": "schedule.html",
+      "category": "페이지"
+    },
+    {
+      "id": "reward",
+      "title": "쿠폰·보상 센터",
+      "keywords": "쿠폰 THANKYOUDAEVA 성장 서포트",
+      "url": "hub.html#rewards",
+      "category": "페이지"
+    },
+    {
+      "id": "patches",
+      "title": "패치 변경 비교",
+      "keywords": "pvp 패치 주신 스탯 피증 내성 돌파",
+      "url": "hub.html#patches",
+      "category": "페이지"
+    },
+    {
+      "id": "calendar",
+      "title": "시즌·점검 달력",
+      "keywords": "11월 18 서버이전 시즌 5 일정",
+      "url": "hub.html#calendar",
+      "category": "페이지"
+    },
+    {
+      "id": "updates",
+      "title": "쭝터기 업데이트 알림",
+      "keywords": "최신 버전 릴리스 다운로드",
+      "url": "hub.html#updates",
+      "category": "페이지"
+    },
+    {
+      "id": "records",
+      "title": "수동 PvP 기록장",
+      "keywords": "전적 RP 통계 기록 백업",
+      "url": "records.html",
+      "category": "페이지"
+    },
+    {
+      "id": "feedback",
+      "title": "오류·기능 제안",
+      "keywords": "문의 버그 일정 수정",
+      "url": "feedback.html",
+      "category": "페이지"
+    },
+    {
+      "id": "privacy",
+      "title": "개인정보 안내",
+      "keywords": "개인정보 로컬 저장",
+      "url": "privacy.html",
+      "category": "페이지"
+    }
+  ]
+}
