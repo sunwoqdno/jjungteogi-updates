@@ -1,0 +1,93 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#080d18"><meta name="description" content="쭝터기 로컬 PvP 기록장. 브라우저에서 교전·RP 기록을 안전하게 관리하고 JSON으로 백업하세요."><title>내 PvP 기록장 | 쭝터기</title>
+<style>:root{color-scheme:dark;font-family:Inter,Pretendard,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;--bg:#080d18;--panel:#101e31;--line:#2b4057;--muted:#9ab0ca;--light:#eef4ff;--mint:#83e6c8}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 95% 0%,#142b46 0%,transparent 45%),var(--bg);color:var(--light)}a{color:inherit;text-decoration:none}input,button,select,textarea{font:inherit}input,textarea,select{background:#0b1829;border:1px solid #39536f;color:var(--light);border-radius:11px;padding:12px;width:100%;min-height:45px}button{border:1px solid #395470;background:#17314b;color:#d4e8ff;border-radius:11px;font-weight:800;padding:12px 15px;cursor:pointer}a:focus-visible,input:focus-visible,button:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--mint);outline-offset:3px}button:hover{background:#1b4260}.wrap{width:calc(100% - 34px);max-width:1080px;margin:auto}.header{border-bottom:1px solid #25354a;position:sticky;top:0;background:#0b1423e8;backdrop-filter:blur(12px);z-index:4}.nav{display:flex;min-height:70px;align-items:center;justify-content:space-between;gap:10px}.brand{font-size:19px;font-weight:850;display:flex;align-items:center;gap:10px;letter-spacing:-.06em}.brand b{background:#277b78;padding:8px;border-radius:10px;font-size:15px}.links{display:flex;gap:18px;color:#a7bdd5;font-weight:700;font-size:13px}.links a:hover{color:var(--mint)}.hero{padding:55px 0 25px}.hero small{color:var(--mint);font-weight:850;letter-spacing:.14em;font-size:12px}.hero h1{font-size:clamp(33px,5vw,55px);letter-spacing:-.06em;margin:10px 0 13px}.hero p{font-size:14px;line-height:1.8;color:#a3b8cd;max-width:760px;margin:0}.notice{border:1px solid #38596d;background:#183145;border-radius:14px;padding:17px 19px;font-size:13px;line-height:1.9;color:#c1dbea}.notice strong{color:var(--mint)}.layout{display:grid;grid-template-columns:355px minmax(0,1fr);gap:16px;margin-top:25px}.panel{background:linear-gradient(150deg,#15273c,#101d30);border:1px solid var(--line);border-radius:18px;padding:23px;min-width:0}.panel h2{font-size:20px;letter-spacing:-.04em;margin:0 0 17px}.form{display:grid;gap:12px}.form label{display:block;font-size:12px;color:#adc4d9;font-weight:700;margin-bottom:6px}.form textarea{min-height:70px;resize:vertical}.cols{display:grid;grid-template-columns:1fr 1fr;gap:11px}.primary{border:1px solid #8de4c8;background:linear-gradient(110deg,#7be8c7,#8bbdf4);color:#06241e}.primary:hover{background:#a4eed8}.small{font-size:12px;color:var(--muted);line-height:1.8}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.metric{background:#0f2135;border:1px solid #2e435c;border-radius:14px;padding:15px}.metric small{display:block;font-size:11px;color:#90a8c3}.metric strong{font-size:clamp(18px,3vw,28px);font-variant-numeric:tabular-nums;display:block;margin-top:9px}.chart{display:flex;align-items:end;gap:8px;height:180px;margin:20px 0 8px;border-bottom:1px solid #35516a}.bar{flex:1;min-width:0;text-align:center}.bar .col{border-radius:6px 6px 0 0;background:linear-gradient(#75cfbb,#347e92);min-height:3px;margin:auto;width:65%;max-width:48px}.bar b{display:block;font-size:10px;color:#87a2bc;padding:7px 0}.bar span{display:block;font-size:10px;color:#e2f6ff;margin-bottom:7px}.toolbar{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin:10px 0}.toolbar input{max-width:320px}.toolbar-buttons{display:flex;gap:7px;flex-wrap:wrap}.toolbar-buttons button{font-size:12px;padding:10px}.records{display:grid;gap:9px;margin-top:14px}.item{border:1px solid #2a405a;background:#112239;border-radius:13px;padding:15px;display:flex;justify-content:space-between;align-items:start;gap:12px}.name{font-size:14px;font-weight:850}.detail{color:#92abc5;font-size:11px;margin-top:7px;line-height:1.7;overflow-wrap:anywhere}.rp{font-size:14px;font-weight:850;color:#a7eed6;white-space:nowrap}.del{border:1px solid #475163;font-size:11px;padding:7px 10px;margin-top:7px;color:#bcd0e5}.empty{padding:34px 12px;border:1px dashed #3c5670;border-radius:13px;color:#91a7c1;text-align:center;font-size:13px}.section-footer{margin:12px 0 50px}.actions{display:flex;gap:8px;flex-wrap:wrap}.actions button,.actions label{font-size:12px}.hint{color:#8fa8c0;font-size:11px;line-height:1.7;margin-top:9px}.footer{border-top:1px solid #25364b;padding:30px 0;color:#7e9bb4;font-size:12px}.warn{color:#f3c6a8}#status{min-height:18px;color:#a4e6cf} @media(max-width:830px){.layout{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(3,1fr)}}@media(max-width:460px){.metrics{gap:5px}.metric{padding:11px}.metric strong{font-size:17px}.links{gap:10px}.links a:first-child{display:none}.item{padding:13px}}</style></head>
+<body><header class="header"><div class="wrap nav"><a class="brand" href="./"><b>쭝</b> 쭝터기</a><nav class="links"><a href="./">홈</a><a href="schedule.html">어비스 일정</a><a href="records.html" style="color:var(--mint)">내 기록</a><a href="feedback.html">문의</a></nav></div></header>
+<main class="wrap"><section class="hero"><small>PERSONAL PVP JOURNAL · LOCAL ONLY</small><h1>나의 PvP 기록장</h1><p>교전·RP 변화를 직접 기록하고 최근 7일 추이를 확인하세요. 기록은 이 브라우저 안에 저장되며, 서버로 전송되지 않습니다.</p></section>
+<div class="notice"><strong>현재는 수동 기록 베타 기능입니다.</strong> 쭝터기 EXE와 자동으로 동기화되지 않으며, 프로그램이 수집한 PvP 데이터를 가져오지도 않습니다. 브라우저 데이터 삭제·다른 PC 이용 시 기록이 없어질 수 있으므로 백업 파일을 저장해 주세요.</div>
+<div class="layout"><section class="panel"><h2>교전 기록 추가</h2><form id="entry" class="form">
+<div><label for="date">교전 일시 (현재 기기 시간)</label><input id="date" type="datetime-local" required></div>
+<div class="cols"><div><label for="enemy">상대 닉네임</label><input id="enemy" maxlength="40" placeholder="선택 입력"></div><div><label for="server">상대 서버</label><input id="server" maxlength="25" placeholder="선택 입력"></div></div>
+<div class="cols"><div><label for="result">교전 결과</label><select id="result"><option value="unknown">미판정</option><option value="win">승리</option><option value="loss">패배</option></select></div><div><label for="rp">RP 증감</label><input id="rp" type="number" value="0" min="-1000000" max="1000000" step="1" required></div></div>
+<div><label for="memo">메모</label><textarea id="memo" maxlength="200" placeholder="세팅, 상황, 다시 확인할 점…"></textarea></div>
+<button class="primary" type="submit">＋ 기록 저장</button><div id="status" class="small" role="status"></div>
+</form></section>
+<section class="panel"><h2>개인 기록 요약</h2><div class="metrics"><div class="metric"><small>기록된 교전</small><strong id="total">0</strong></div><div class="metric"><small>판정 승률</small><strong id="winrate">—</strong></div><div class="metric"><small>최근 7일 RP 합계</small><strong id="rpTotal">0</strong></div></div><h3 style="font-size:15px;margin:24px 0 2px">최근 7일 RP 증감</h3><p class="small">수동 입력한 RP 값의 일별 합계입니다. 실제 게임 수치와 차이가 날 수 있습니다.</p><div class="chart" id="chart"></div><div class="actions"><button type="button" id="backup">JSON 백업 다운로드</button><label style="border:1px solid #395470;background:#17314b;padding:12px 15px;border-radius:11px;cursor:pointer;font-weight:800">JSON 백업 불러오기<input type="file" id="restore" accept="application/json,.json" hidden></label></div><p class="hint">복원은 기존 기록에 덮어쓰며, 읽을 수 있는 백업 형식만 허용합니다. 닉네임과 전투 정보는 본인이 직접 입력한 내용만 보관하세요.</p></section></div>
+<section class="panel" style="margin-top:17px"><div class="toolbar"><h2 style="margin:0">최근 기록</h2><div class="toolbar-buttons"><button type="button" id="clear">전체 삭제</button></div></div><div class="toolbar"><input id="search" placeholder="상대·서버·메모 검색" autocomplete="off"><span class="small" id="shown">0개</span></div><div id="records" class="records"><div class="empty">아직 기록이 없습니다.</div></div></section>
+<p class="small section-footer"><span class="warn">주의:</span> 기록에 계정 비밀번호, 인증 코드, 게임 로그인 정보 등을 입력하지 마세요. 전적은 수동 입력값이므로 공개 랭킹이나 객관적인 승패 데이터로 사용하지 않습니다.</p></main><footer class="footer"><div class="wrap">© 2026 Jjungteogi · 브라우저 로컬 기록장 · 서버 자동 전송 없음</div></footer>
+<script>
+(function(){
+"use strict";
+var STORAGE="jjung-local-pvp-v1",MAX=1000,records=[];
+function $(id){return document.getElementById(id);}
+function tag(t,c,v){var x=document.createElement(t);if(c)x.className=c;if(v!==undefined)x.textContent=v;return x;}
+function norm(x){if(!x||typeof x!=="object"||!Number.isFinite(x.at)||x.at<946684800000||x.at>Date.now()+86400000||typeof x.rp!=="number"||!Number.isInteger(x.rp)||Math.abs(x.rp)>1000000)return null;return {id:typeof x.id==="string"&&x.id.length<80?x.id:String(x.at)+"-"+Math.random().toString(36).slice(2),at:x.at,enemy:String(x.enemy||"").slice(0,40),server:String(x.server||"").slice(0,25),result:["win","loss","unknown"].includes(x.result)?x.result:"unknown",rp:x.rp,memo:String(x.memo||"").slice(0,200)};}
+function load(){try{var raw=JSON.parse(localStorage.getItem(STORAGE)||"[]");if(Array.isArray(raw))records=raw.slice(0,MAX).map(norm).filter(Boolean);}catch(e){records=[];}}
+function save(){try{localStorage.setItem(STORAGE,JSON.stringify(records));return true;}catch(e){$("status").textContent="저장 공간 제한으로 기록 저장에 실패했습니다. 백업 후 데이터를 정리하세요.";return false;}}
+function localTime(t){return new Date(t).toLocaleString("ko-KR",{year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"});}
+function dayKey(t){var d=new Date(t);return [d.getFullYear(),String(d.getMonth()+1).padStart(2,"0"),String(d.getDate()).padStart(2,"0")].join("-");}
+function sum7(){
+ var days=[];
+ for(var i=6;i>=0;i--){var d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()-i);days.push({day:dayKey(d.getTime()),label:(d.getMonth()+1)+"/"+d.getDate(),sum:0});}
+ var map=new Map(days.map(function(d){return [d.day,d];}));
+ records.forEach(function(r){var day=map.get(dayKey(r.at));if(day)day.sum+=r.rp;});
+ return days;
+}
+function renderStats(){
+ $("total").textContent=records.length.toLocaleString("ko-KR");
+ var decided=records.filter(function(r){return r.result!=="unknown";});
+ var wins=decided.filter(function(r){return r.result==="win";}).length;
+ $("winrate").textContent=decided.length?Math.round(wins/decided.length*100)+"%":"—";
+ var days=sum7(),total=days.reduce(function(s,x){return s+x.sum;},0);
+ $("rpTotal").textContent=(total>0?"+":"")+total.toLocaleString("ko-KR");
+ var max=Math.max(1,...days.map(function(d){return Math.abs(d.sum);}));
+ var chart=$("chart");chart.replaceChildren();
+ days.forEach(function(d){var b=tag("div","bar"),v=tag("span","",(d.sum>0?"+":"")+d.sum.toLocaleString("ko-KR")),col=tag("div","col"),lbl=tag("b","",d.label);col.style.height=Math.max(3,Math.round(Math.abs(d.sum)/max*102))+"px";col.style.background=d.sum<0?"linear-gradient(#dca38e,#9d6766)":"";b.append(v,col,lbl);chart.append(b);});
+}
+function renderList(){
+ var q=$("search").value.trim().toLocaleLowerCase("ko"),list=records.filter(function(r){return !q||(r.enemy+" "+r.server+" "+r.memo).toLocaleLowerCase("ko").includes(q);}).sort(function(a,b){return b.at-a.at;});
+ $("shown").textContent=list.length+"개 / 총 "+records.length+"개";
+ var target=$("records");target.replaceChildren();
+ if(!list.length){target.appendChild(tag("div","empty",records.length?"검색 결과가 없습니다.":"아직 기록이 없습니다. 왼쪽에서 교전을 추가하세요."));return;}
+ list.slice(0,200).forEach(function(r){
+  var item=tag("article","item"),left=tag("div"),title=tag("div","name",r.enemy||"상대 미입력"),desc=tag("div","detail",localTime(r.at)+" · "+(r.server||"서버 미입력")+" · "+({win:"승리",loss:"패배",unknown:"미판정"}[r.result])),right=tag("div"),rp=tag("div","rp",(r.rp>0?"+":"")+r.rp.toLocaleString("ko-KR")+" RP"),button=tag("button","del","삭제");
+  if(r.memo)desc.appendChild(tag("div","",r.memo));
+  button.type="button";button.addEventListener("click",function(){if(!window.confirm("이 기록을 삭제할까요?"))return;records=records.filter(function(x){return x.id!==r.id;});save();render();});
+  left.append(title,desc);right.append(rp,button);item.append(left,right);target.append(item);
+ });
+ if(list.length>200)target.appendChild(tag("div","small","최신 200개만 표시합니다. 백업 파일에는 전체 기록이 포함됩니다."));
+}
+function render(){renderStats();renderList();}
+function nowInput(){var d=new Date(),local=new Date(d.getTime()-d.getTimezoneOffset()*60000);$("date").value=local.toISOString().slice(0,16);}
+$("entry").addEventListener("submit",function(e){
+ e.preventDefault();
+ var t=new Date($("date").value).getTime(),rp=Number($("rp").value);
+ var record=norm({id:String(t)+"-"+Math.random().toString(36).slice(2,10),at:t,enemy:$("enemy").value.trim(),server:$("server").value.trim(),result:$("result").value,rp:rp,memo:$("memo").value.trim()});
+ if(!record){$("status").textContent="날짜와 RP 수치를 확인해 주세요.";return;}
+ if(records.length>=MAX){$("status").textContent="최대 1,000건입니다. 백업 후 오래된 기록을 삭제하세요.";return;}
+ records.unshift(record);
+ if(save()){$("status").textContent="이 브라우저에 저장했습니다.";this.reset();nowInput();}
+ render();
+});
+$("search").addEventListener("input",renderList);
+$("clear").addEventListener("click",function(){if(!records.length)return;if(window.confirm("브라우저에 저장된 모든 PvP 기록을 삭제할까요? 복구할 수 없습니다.")){records=[];save();render();}});
+$("backup").addEventListener("click",function(){
+ var content=JSON.stringify({format:"jjung-local-pvp-v1",exportedAt:new Date().toISOString(),records:records},null,2);
+ var url=URL.createObjectURL(new Blob([content],{type:"application/json;charset=utf-8"}));
+ var a=tag("a");a.href=url;a.download="jjung-pvp-backup-"+dayKey(Date.now())+".json";document.body.append(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},1000);
+});
+$("restore").addEventListener("change",function(){
+ var file=this.files&&this.files[0];this.value="";if(!file)return;
+ if(file.size>2*1024*1024){$("status").textContent="2MB 이하 백업만 불러올 수 있습니다.";return;}
+ var reader=new FileReader();
+ reader.onload=function(){
+  try{var obj=JSON.parse(String(reader.result||""));if(obj.format!=="jjung-local-pvp-v1"||!Array.isArray(obj.records)||obj.records.length>MAX)throw Error("지원하지 않는 백업 파일");
+   var parsed=obj.records.map(norm);
+   if(parsed.some(function(x){return !x;}))throw Error("유효하지 않은 교전 기록이 있습니다.");
+   if(!window.confirm("현재 기록 "+records.length+"건을 백업 파일 "+parsed.length+"건으로 교체할까요?"))return;
+   records=parsed;save();render();$("status").textContent="기록을 복원했습니다.";
+  }catch(e){$("status").textContent="복원 실패: "+String(e.message||e);}
+ };
+ reader.readAsText(file,"utf-8");
+});
+load();nowInput();render();
+})();
+</script></body></html>
