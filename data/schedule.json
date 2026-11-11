@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-11-11",
+  "timezone": "Asia/Seoul",
+  "region": "KR",
+  "matching": {
+    "groups": [
+      {
+        "group": 1,
+        "west": "시엘",
+        "east": "지켈",
+        "slot": 1
+      },
+      {
+        "group": 2,
+        "west": "바이젤",
+        "east": "바바룽",
+        "slot": 2
+      },
+      {
+        "group": 3,
+        "west": "트리니엘",
+        "east": "아스펠",
+        "slot": 3
+      },
+      {
+        "group": 4,
+        "west": "카이시넬",
+        "east": "루미엘",
+        "slot": 1
+      },
+      {
+        "group": 5,
+        "west": "마르쿠탄",
+        "east": "이스할겐",
+        "slot": 2
+      },
+      {
+        "group": 6,
+        "west": "유스티엘",
+        "east": "에레슈키갈",
+        "slot": 3
+      },
+      {
+        "group": 7,
+        "west": "아리엘",
+        "east": "네몬",
+        "slot": 1
+      },
+      {
+        "group": 8,
+        "west": "프레기온",
+        "east": "코치룽",
+        "slot": 2
+      },
+      {
+        "group": 9,
+        "west": "메스람타에다",
+        "east": "울고른",
+        "slot": 3
+      },
+      {
+        "group": 10,
+        "west": "나니아",
+        "east": "젠카카",
+        "slot": 1
+      },
+      {
+        "group": 11,
+        "west": "루드라",
+        "east": "브리트라",
+        "slot": 2
+      },
+      {
+        "group": 12,
+        "west": "무닌",
+        "east": "파프니르",
+        "slot": 3
+      },
+      {
+        "group": 13,
+        "west": "페르노스",
+        "east": "콰이링",
+        "slot": 1
+      },
+      {
+        "group": 14,
+        "west": "오다르",
+        "east": "인드나흐",
+        "slot": 2
+      },
+      {
+        "group": 15,
+        "west": "다미누",
+        "east": "루터스",
+        "slot": 3
+      },
+      {
+        "group": 16,
+        "west": "카사카",
+        "east": "타하바타",
+        "slot": 1
+      },
+      {
+        "group": 17,
+        "west": "바카르마",
+        "east": "네자칸",
+        "slot": 2
+      },
+      {
+        "group": 18,
+        "west": "크로메데",
+        "east": "하달",
+        "slot": 3
+      },
+      {
+        "group": 19,
+        "west": "챈가룽",
+        "east": "히타니에",
+        "slot": 1
+      },
+      {
+        "group": 20,
+        "west": "이슈타르",
+        "east": "이스라펠",
+        "slot": 2
+      },
+      {
+        "group": 21,
+        "west": "포에타",
+        "east": "티아마트",
+        "slot": 3
+      }
+    ],
+    "source": "https://www.inven.co.kr/board/aion2/6388/295057",
+    "status": "2026-11-11 패치노트의 서버 재매칭표 기준"
+  },
+  "sourceLinks": [
+    {
+      "name": "11월 11일 패치 노트(인벤 게재)",
+      "url": "https://www.inven.co.kr/board/aion2/6388/295057"
+    },
+    {
+      "name": "아이온2 공식 업데이트",
+      "url": "https://aion2.plaync.com/ko-kr/board/update/list"
+    },
+    {
+      "name": "아이온2 공식 1주년 업데이트",
+      "url": "https://aion2.plaync.com/ko-kr/conts/261108_update"
+    },
+    {
+      "name": "이전 일정 참고(만렙노트)",
+      "url": "https://manlepnote.com/aion2/schedule/weekly"
+    }
+  ],
+  "events": [
+    {
+      "id": "artifact",
+      "name": "아티팩트 점령전",
+      "kind": "abyss",
+      "days": [
+        3,
+        6
+      ],
+      "groupTimes": [
+        "22:00",
+        "22:30",
+        "23:00"
+      ],
+      "confidence": "patch",
+      "note": "수·토 / 서버 매칭 그룹에 따라 시간 변경"
+    },
+    {
+      "id": "nahma",
+      "name": "수호신장 나흐마",
+      "kind": "abyss",
+      "days": [
+        5,
+        0
+      ],
+      "groupTimes": [
+        "22:00",
+        "22:30",
+        "23:00"
+      ],
+      "confidence": "patch",
+      "note": "금·일 / 서버 매칭 그룹에 따라 시간 변경"
+    },
+    {
+      "id": "kaira",
+      "name": "감시자 카이라",
+      "kind": "boss",
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "times": [
+        "01:00",
+        "09:00",
+        "13:00",
+        "21:00"
+      ],
+      "confidence": "patch",
+      "note": "11/11 패치로 05:00·17:00 출현 삭제"
+    },
+    {
+      "id": "agro",
+      "name": "정령왕 아그로",
+      "kind": "boss",
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "times": [
+        "09:00",
+        "21:00"
+      ],
+      "confidence": "recent",
+      "note": "최근 일정 기준. 인게임에서 최종 확인 권장"
+    },
+    {
+      "id": "rift",
+      "name": "시공의 균열",
+      "kind": "rift",
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "times": [
+        "02:00",
+        "05:00",
+        "08:00",
+        "11:00",
+        "14:00",
+        "17:00",
+        "20:00",
+        "23:00"
+      ],
+      "confidence": "community",
+      "note": "커뮤니티 기준 정각 주기. 입장 가능 여부는 게임에서 확인"
+    },
+    {
+      "id": "outland",
+      "name": "어비스 아웃랜드",
+      "kind": "pvp",
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "times": [
+        "11:10",
+        "11:40",
+        "12:10",
+        "12:40",
+        "13:10",
+        "13:40",
+        "20:10",
+        "20:40",
+        "21:10",
+        "21:40",
+        "22:10",
+        "22:40",
+        "23:10",
+        "23:40"
+      ],
+      "confidence": "recent",
+      "note": "11/4 조정 일정 기준. 11/11 패치 이후 실제 진행 시간 확인 권장"
+    },
+    {
+      "id": "shugo",
+      "name": "욕심쟁이 슈고 대소동",
+      "kind": "event",
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "times": [
+        "12:30",
+        "18:30",
+        "23:30"
+      ],
+      "from": "2026-11-11",
+      "untilExclusive": "2026-12-02",
+      "confidence": "patch",
+      "note": "1주년 기간 한정 / 12/2 정기점검 전 종료"
+    }
+  ],
+  "removedAfterPatch": [
+    "아티팩트 점령전 직후 집행자 카이라·아그로·타마사 및 드라모스·듀칼·마라카 추가 등장"
+  ],
+  "disclaimer": "표시 시각은 모두 한국 서버(KST) 예정 시간이며, 점검·변경·실제 입장 상태는 게임 공지를 우선합니다."
+}
