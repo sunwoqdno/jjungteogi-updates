@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#080d18">
+<meta name="description" content="쭝터기 아이온2 한국 서버 어비스 매칭표와 실시간 일정 카운트다운. 2026년 11월 11일 패치 반영.">
+<title>어비스 일정 · 매칭표 | 쭝터기</title>
+<style>
+:root{color-scheme:dark;font-family:Inter,Pretendard,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;--bg:#080d18;--panel:#101c2e;--panel2:#172840;--border:#2a3b52;--light:#eef5ff;--muted:#9badc5;--mint:#78ebca;--blue:#8cb8f9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 95% 0%,#142d46 0,transparent 46%),var(--bg);color:var(--light)}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button,select{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
+.wrap{max-width:1110px;width:calc(100% - 34px);margin:auto}.header{border-bottom:1px solid #223348;background:#0b1423d9;position:sticky;top:0;z-index:4;backdrop-filter:blur(14px)}.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{font-size:19px;font-weight:850;letter-spacing:-.06em;display:flex;align-items:center;gap:10px}.brand b{font-size:15px;background:#277b78;padding:8px 9px;border-radius:10px}.navlinks{display:flex;gap:22px;font-size:13px;font-weight:700;color:#b5c4d9}.navlinks a:hover{color:var(--mint)}
+.hero{padding:57px 0 36px;display:flex;justify-content:space-between;align-items:end;gap:28px}.kicker{color:var(--mint);font-size:12px;font-weight:800;letter-spacing:.12em}.hero h1{font-size:clamp(34px,5.5vw,57px);line-height:1.17;letter-spacing:-.07em;margin:14px 0}.hero p{color:var(--muted);font-size:14px;line-height:1.8;margin:0;max-width:640px}.clock{min-width:190px;text-align:right;border:1px solid var(--border);border-radius:16px;padding:16px 20px;background:#101f33}.clock small{display:block;font-size:11px;color:#9fbbd0}.clock strong{display:block;font-size:25px;letter-spacing:.01em;margin-top:5px;font-variant-numeric:tabular-nums}
+.card{border:1px solid var(--border);background:linear-gradient(155deg,#15253a,#0d1a2b);border-radius:20px;padding:23px}.notice{background:linear-gradient(120deg,#173a39,#162c47);border:1px solid #316357;border-radius:15px;padding:17px 20px;color:#d3eee9;line-height:1.75;font-size:13px}.notice strong{display:block;color:#9bf5d4;margin-bottom:3px}.muted{color:var(--muted)}.section{margin:27px 0 0}.sectiontitle{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px;flex-wrap:wrap}.sectiontitle h2{letter-spacing:-.045em;font-size:23px;margin:0}.small{font-size:12px;color:#a2b4cc}.select-card{display:grid;grid-template-columns:1fr 1.2fr;gap:18px;align-items:end}.field label{color:#a6b9d1;font-size:12px;display:block;font-weight:700;margin-bottom:9px}.field select,.field input{width:100%;min-height:47px;padding:11px 13px;background:#0b1626;color:#ecf5ff;border:1px solid #36506b;border-radius:11px;outline-offset:3px}.field select:hover,.field input:hover{border-color:#5988a8}.group-info{background:#112a36;border:1px solid #28504e;border-radius:11px;min-height:48px;padding:12px 14px;font-size:13px;line-height:1.6}.group-info b{color:var(--mint)}
+.next-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.next{border:1px solid var(--border);border-radius:17px;background:#122238;padding:19px;min-height:145px}.next small{color:#93aeca;font-size:11px;font-weight:700}.next strong{display:block;font-size:16px;margin:10px 0;letter-spacing:-.02em}.next .timer{color:var(--mint);font-size:22px;font-weight:850;font-variant-numeric:tabular-nums}.filter{display:flex;gap:7px;flex-wrap:wrap}.filter button,.range button{border:1px solid #35516a;background:#13243a;border-radius:100px;color:#b3c5d9;font-size:12px;font-weight:800;padding:10px 13px}.filter button[aria-pressed="true"],.range button[aria-pressed="true"]{border-color:#75dcbf;background:#183b39;color:#9ff3d9}.range{display:flex;gap:7px;flex-wrap:wrap}.events{display:grid;gap:9px}.day-heading{color:#87a7c2;font-size:12px;font-weight:800;letter-spacing:.01em;margin:16px 4px 4px}.event-row{background:#121f32;border:1px solid #273b52;border-radius:13px;padding:14px 17px;display:flex;justify-content:space-between;align-items:center;gap:12px}.ev-left{display:flex;align-items:center;gap:13px;min-width:0}.time{font-size:17px;font-weight:850;letter-spacing:-.02em;min-width:57px;font-variant-numeric:tabular-nums}.ev-name{font-size:14px;font-weight:800}.ev-note{font-size:11px;color:#92a8c1;margin-top:4px;line-height:1.4}.ev-right{text-align:right;min-width:120px}.ev-right .until{font-size:14px;color:#9bead3;font-weight:850;font-variant-numeric:tabular-nums}.quality{font-size:10px;color:#a1b2c9;margin-top:5px}.empty{padding:28px;text-align:center;color:#9db0c7;background:#102033;border:1px dashed #35506a;border-radius:15px;font-size:13px}
+.match-tools{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:12px}.match-tools .field{max-width:300px;flex:1}.match-table{overflow:auto;border:1px solid #2a3e55;border-radius:15px}.match-table table{width:100%;border-collapse:collapse;min-width:480px}.match-table th,.match-table td{font-size:12px;text-align:left;padding:13px 15px;border-bottom:1px solid #263a50}.match-table th{color:#a4b7d0;font-size:11px;background:#15283e}.match-table tr:last-child td{border-bottom:0}.match-table tr.selected{background:#153835}.match-table .slot{color:#8ee5cb;font-weight:800}.footnote{font-size:12px;color:#90a3bc;line-height:1.85;margin-top:16px}.sources{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.sources a{font-size:12px;border:1px solid #30465f;padding:9px 12px;border-radius:9px;color:#9bcaf7}.sources a:hover{border-color:#8faec7}.footer{border-top:1px solid #243247;margin-top:65px;padding:26px 0 35px;font-size:12px;color:#849cb6;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+@media(max-width:770px){.hero{display:block;padding-top:38px}.clock{text-align:left;display:inline-block;margin-top:22px}.next-cards{grid-template-columns:1fr}.next{min-height:112px}.select-card{grid-template-columns:1fr}.navlinks{gap:12px}.ev-right{min-width:94px}}@media(max-width:430px){.navlinks a:first-child{display:none}.clock{display:block}.ev-left{gap:8px}.event-row{padding:13px}.ev-right .until{font-size:12px}.time{font-size:15px;min-width:49px}.ev-name{font-size:13px}.ev-note{font-size:10px}.sectiontitle h2{font-size:20px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="header"><div class="wrap nav"><a class="brand" href="./"><b>쭝</b> 쭝터기</a><div class="navlinks"><a href="./">홈</a><a href="schedule.html" style="color:#92e5cf">어비스 일정</a><a href="records.html">내 기록</a><a href="feedback.html">문의</a></div></div></header>
+<main class="wrap">
+<section class="hero"><div><div class="kicker">ABYSS SCHEDULE · KOREA</div><h1>어비스 일정과 서버 매칭</h1><p>11월 11일 재매칭을 반영한 21개 그룹 검색, 내 서버 점령전 시간, 다가오는 콘텐츠 카운트다운을 제공합니다. 모든 시각은 한국 서버 시간(KST) 기준입니다.</p></div><div class="clock"><small>한국 서버 시각 · KST</small><strong id="clock">--:--:--</strong><small id="date">일정 불러오는 중…</small></div></section>
+<section class="notice"><strong>2026.11.11 대규모 시간표 개편 반영</strong>아티팩트 점령전은 수·토 22:00 / 22:30 / 23:00(그룹별), 나흐마는 금·일 같은 시간입니다. 감시자 카이라는 하루 4회(01:00 / 09:00 / 13:00 / 21:00)로 변경됐습니다. 점령전 직후 일부 어비스 보스는 삭제되어 표시하지 않습니다.</section>
+<section class="section card"><div class="sectiontitle"><h2>내 서버 선택</h2><span class="small">선택 정보는 이 브라우저에만 저장됩니다</span></div><div class="select-card"><div class="field"><label for="server">서버 검색 및 선택</label><select id="server"><option value="">서버를 선택하세요</option></select></div><div class="group-info" id="groupinfo">서버를 선택하면 매칭 상대와 그룹별 점령전·나흐마 시간을 표시합니다.</div></div></section>
+<section class="section"><div class="sectiontitle"><h2>다가오는 주요 일정</h2><span class="small">예정 시각까지의 카운트다운 · 실제 진행 여부는 게임에서 확인</span></div><div id="next" class="next-cards"><div class="empty">일정 불러오는 중…</div></div></section>
+<section class="section"><div class="sectiontitle"><h2>이벤트 시간표</h2><div class="range" id="range"><button type="button" data-range="24" aria-pressed="true">다음 24시간</button><button type="button" data-range="168" aria-pressed="false">7일</button></div></div><div class="filter" id="filters" aria-label="콘텐츠 필터"><button type="button" data-kind="abyss" aria-pressed="true">점령전·나흐마</button><button type="button" data-kind="boss" aria-pressed="true">필드보스</button><button type="button" data-kind="event" aria-pressed="true">기간 이벤트</button><button type="button" data-kind="rift" aria-pressed="false">시공</button><button type="button" data-kind="pvp" aria-pressed="false">아웃랜드</button></div><p class="small" style="margin:12px 0 17px">시공·아웃랜드는 최근 커뮤니티 일정에 기반한 참고 정보입니다. 기본 표시에서 제외하며 게임 내 일정이 우선합니다.</p><div id="events" class="events"><div class="empty">일정 불러오는 중…</div></div></section>
+<section class="section"><div class="sectiontitle"><h2>2026.11.11 서버 매칭표</h2><span class="small" id="verified">패치노트 기준</span></div><div class="match-tools"><div class="field"><label for="match-search">서버 이름으로 필터</label><input id="match-search" autocomplete="off" placeholder="예: 네자칸 / 이스라펠 / 시엘"></div><span class="small" id="match-count">21개 그룹</span></div><div class="match-table"><table><thead><tr><th>그룹</th><th>서부 서버</th><th>동부 서버</th><th>점령전(수·토)</th><th>나흐마(금·일)</th></tr></thead><tbody id="match-body"></tbody></table></div></section>
+<section class="section card"><div class="sectiontitle"><h2>근거 자료와 검증 범위</h2><span class="small">일정 변동 시 인게임 공지 우선</span></div><p class="footnote" id="disclaimer">이 시간표는 실시간 게임 서버 상태를 조회하지 않습니다. 예정 시간과 실제 시작이 다를 수 있습니다.</p><div class="sources" id="sources"><a href="https://aion2.plaync.com/ko-kr/board/update/list" target="_blank" rel="noopener noreferrer">공식 업데이트 열기 ↗</a></div><p class="footnote">오류를 발견하면 <a href="feedback.html" style="color:#89d0fa;text-decoration:underline">시간표 수정 제보</a>를 이용해 주세요. 비정기 유지보수·임시 공지는 자동 반영되지 않습니다.</p></section>
+<footer class="footer"><span>© 2026 Jjungteogi · AION2 비공식 도구</span><span>KR 서버 · KST · 접속 정보 수집 없음</span></footer>
+</main>
+<script>
+(function(){
+ "use strict";
+ var data=null,selected="",rangeHours=24,visible={abyss:true,boss:true,event:true,rift:false,pvp:false};
+ var koreaOffset=9*3600000,oneDay=86400000;
+ function $(id){return document.getElementById(id);}
+ function node(tag,cls,value){var v=document.createElement(tag);if(cls)v.className=cls;if(value!==undefined)v.textContent=value;return v;}
+ function kstNow(){return new Date(Date.now()+koreaOffset);}
+ function kstDate(d){return [d.getUTCFullYear(),String(d.getUTCMonth()+1).padStart(2,"0"),String(d.getUTCDate()).padStart(2,"0")].join("-");}
+ function shortDate(ts){return new Intl.DateTimeFormat("ko-KR",{timeZone:"Asia/Seoul",month:"long",day:"numeric",weekday:"short"}).format(new Date(ts));}
+ function timeParts(text){var p=text.split(":").map(Number);return {hour:p[0],minute:p[1]};}
+ function localTime(ts){return new Intl.DateTimeFormat("ko-KR",{timeZone:"Asia/Seoul",hour:"2-digit",minute:"2-digit",hour12:false}).format(new Date(ts));}
+ function group(){return data&&data.matching.groups.find(function(g){return g.west===selected||g.east===selected;});}
+ function groupTime(g){return ["22:00","22:30","23:00"][g.slot-1];}
+ function listEntries(){
+  if(!data)return [];
+  var n=kstNow(),base=Date.UTC(n.getUTCFullYear(),n.getUTCMonth(),n.getUTCDate());
+  var groupSelected=group(),arr=[];
+  for(var i=0;i<=8;i++){
+   var dayPseudo=base+i*oneDay,day=new Date(dayPseudo),dayNumber=day.getUTCDay(),ymd=kstDate(day);
+   data.events.forEach(function(ev){
+    if(ev.days.indexOf(dayNumber)<0)return;
+    if(ev.from&&ymd<ev.from)return;
+    if(ev.untilExclusive&&ymd>=ev.untilExclusive)return;
+    if(ev.groupTimes&&!groupSelected)return;
+    var slots=ev.groupTimes?[ev.groupTimes[groupSelected.slot-1]]:ev.times||[];
+    slots.forEach(function(t){
+     var p=timeParts(t),ms=dayPseudo-koreaOffset+p.hour*3600000+p.minute*60000;
+     if(ms<=Date.now()-1000)return;
+     arr.push({at:ms,time:t,ev:ev});
+    });
+   });
+  }
+  arr.sort(function(a,b){return a.at-b.at||a.ev.name.localeCompare(b.ev.name,"ko");});
+  return arr;
+ }
+ function countdown(ms){
+  var left=Math.max(0,Math.floor((ms-Date.now())/1000));
+  var d=Math.floor(left/86400),h=Math.floor(left%86400/3600),m=Math.floor(left%3600/60),s=left%60;
+  return (d?d+"일 ":"")+String(h).padStart(2,"0")+":"+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+ }
+ function renderNext(){
+  var list=listEntries().filter(function(e){return visible[e.ev.kind];}).slice(0,3),root=$("next");root.replaceChildren();
+  if(!list.length){root.appendChild(node("div","empty","다가오는 일정이 없습니다. 서버 선택 또는 필터를 확인하세요."));return;}
+  list.forEach(function(item){
+    var box=node("article","next"),sub=node("small","",shortDate(item.at)+" · "+localTime(item.at)),title=node("strong","",item.ev.name);
+    var count=node("div","timer",countdown(item.at));count.dataset.at=String(item.at);
+    box.append(sub,title,count);root.append(box);
+  });
+ }
+ function renderEvents(){
+  var list=listEntries().filter(function(e){return visible[e.ev.kind]&&e.at<=Date.now()+rangeHours*3600000;});
+  var root=$("events");root.replaceChildren();
+  if(!list.length){root.appendChild(node("div","empty","조건에 맞는 일정이 없습니다. 서버와 필터를 확인하세요."));return;}
+  var key="";
+  list.slice(0,350).forEach(function(item){
+   var day=shortDate(item.at),ev=item.ev;
+   if(day!==key){root.appendChild(node("div","day-heading",day));key=day;}
+   var row=node("article","event-row"),left=node("div","ev-left"),time=node("span","time",localTime(item.at)),details=node("div"),name=node("div","ev-name",ev.name),explain=node("div","ev-note",ev.note||"");
+   details.append(name,explain);left.append(time,details);
+   var right=node("div","ev-right"),count=node("div","until",countdown(item.at)),qual=node("div","quality",ev.confidence==="patch"?"11/11 패치 확인":ev.confidence==="recent"?"최근 일정 · 재확인 권장":"커뮤니티 참고");
+   count.dataset.at=String(item.at);right.append(count,qual);row.append(left,right);root.append(row);
+  });
+ }
+ function renderMatching(){
+  if(!data)return;
+  var query=$("match-search").value.trim().toLocaleLowerCase("ko"),arr=data.matching.groups.filter(function(g){return !query||String(g.group).includes(query)||g.west.includes(query)||g.east.includes(query);});
+  var tbody=$("match-body");tbody.replaceChildren();
+  arr.forEach(function(g){
+   var tr=node("tr",selected&&(g.west===selected||g.east===selected)?"selected":"");
+   [String(g.group)+"그룹",g.west,g.east,groupTime(g),groupTime(g)].forEach(function(val,j){var td=node("td",j>=3?"slot":"",val);tr.appendChild(td);});
+   tbody.appendChild(tr);
+  });
+  $("match-count").textContent=arr.length+"개 그룹";
+ }
+ function renderServer(){
+  var g=group();
+  $("groupinfo").replaceChildren();
+  if(!g){$("groupinfo").textContent="서버를 선택하면 매칭 상대와 그룹별 점령전·나흐마 시간을 표시합니다.";return;}
+  var other=g.west===selected?g.east:g.west;
+  var bold=node("b","",g.group+"그룹 · "+selected+" ↔ "+other),details=node("div","", "아티팩트 수·토 "+groupTime(g)+" / 나흐마 금·일 "+groupTime(g)+" (KST)");
+  $("groupinfo").append(bold,details);
+ }
+ function renderSources(){
+  $("verified").textContent=data.verifiedAt+" 검증 · "+data.matching.groups.length+"개 그룹";
+  $("disclaimer").textContent=data.disclaimer+" 시공 및 아웃랜드는 최신 재확인이 필요한 참고 정보입니다.";
+  var root=$("sources");root.replaceChildren();
+  data.sourceLinks.forEach(function(ref){var a=node("a","",ref.name+" ↗");a.href=ref.url;a.target="_blank";a.rel="noopener noreferrer";root.appendChild(a);});
+ }
+ function redraw(){renderServer();renderNext();renderEvents();renderMatching();}
+ function tick(){
+  var n=kstNow(),clock=[n.getUTCHours(),n.getUTCMinutes(),n.getUTCSeconds()].map(function(i){return String(i).padStart(2,"0");}).join(":");
+  $("clock").textContent=clock;$("date").textContent=kstDate(n)+" · 한국시간";
+  if(!data)return;
+  document.querySelectorAll("[data-at]").forEach(function(n){n.textContent=countdown(Number(n.dataset.at));});
+  if(!tick.last||Date.now()-tick.last>60000){tick.last=Date.now();redraw();}
+ }
+ $("server").addEventListener("change",function(){
+   selected=this.value;
+   try{localStorage.setItem("jjung-selected-server",selected);}catch(e){}
+   redraw();
+ });
+ $("match-search").addEventListener("input",renderMatching);
+ $("filters").addEventListener("click",function(ev){var b=ev.target.closest("button[data-kind]");if(!b)return;visible[b.dataset.kind]=!visible[b.dataset.kind];b.setAttribute("aria-pressed",String(visible[b.dataset.kind]));redraw();});
+ $("range").addEventListener("click",function(ev){var b=ev.target.closest("button[data-range]");if(!b)return;rangeHours=Number(b.dataset.range);$("range").querySelectorAll("button").forEach(function(btn){btn.setAttribute("aria-pressed",String(btn===b));});redraw();});
+ fetch("data/schedule.json",{cache:"no-cache"})
+  .then(function(r){if(!r.ok)throw Error("HTTP "+r.status);return r.json();})
+  .then(function(v){
+   if(!v||v.schemaVersion!==1||!Array.isArray(v.matching.groups)||!Array.isArray(v.events))throw Error("데이터 형식 오류");
+   data=v;var all=[].concat.apply([],v.matching.groups.map(function(g){return [g.west,g.east];})).sort(function(a,b){return a.localeCompare(b,"ko");});
+   all.forEach(function(s){var op=node("option","",s);op.value=s;$("server").appendChild(op);});
+   try{selected=localStorage.getItem("jjung-selected-server")||"";}catch(e){}
+   if(!all.includes(selected))selected="";
+   $("server").value=selected;renderSources();redraw();
+  })
+  .catch(function(err){
+    $("next").replaceChildren(node("div","empty","일정 파일을 불러오지 못했습니다. 새로고침하거나 GitHub 배포 상태를 확인해 주세요."));
+    $("events").replaceChildren(node("div","empty","일정 정보를 가져오지 못했습니다."));
+    $("groupinfo").textContent="일정을 불러오지 못했습니다: "+String(err.message||"오류");
+  });
+ tick();setInterval(tick,1000);
+ document.addEventListener("visibilitychange",function(){if(!document.hidden){tick.last=0;tick();}});
+})();
+</script>
+</body></html>
