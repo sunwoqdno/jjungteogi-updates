@@ -52,12 +52,22 @@ function render(){
    const button=el("button","",label);button.disabled=status===item.status||busy;button.type="button";
    button.addEventListener("click",async()=>{
     if(busy)return;busy=true;msg("상태를 변경하고 있습니다…");
-    try{await call({action:"set_status",id:item.id,status});item.status=status;msg("상태가 '"+label+"'로 변경됐습니다.");render();}
+    try{await call({action:"set_status",id:item.id,status});item.status=status;msg("상태가 '"+label+"'로 변경됐습니다.");}
     catch(e){msg("처리 실패: "+e.message);}
-    finally{busy=false;}
+    finally{busy=false;render();}
    });
    actions.append(button);
   }
+  const remove=el("button","","문의 삭제");remove.type="button";remove.style.borderColor="#80505c";remove.style.color="#f4b5c1";
+  remove.addEventListener("click",async()=>{
+    if(busy)return;
+    if(!window.confirm("선택한 문의를 영구 삭제할까요? 복구할 수 없습니다.\n접수번호: "+item.id.slice(0,8).toUpperCase()))return;
+    busy=true;msg("문의 삭제 중…");
+    try{await call({action:"delete",id:item.id,confirm:"DELETE"});rows=rows.filter(x=>x.id!==item.id);msg("선택한 문의가 삭제됐습니다.");}
+    catch(e){msg("삭제 실패: "+e.message);}
+    finally{busy=false;render();}
+  });
+  actions.append(remove);
   card.append(actions);root.append(card);
  });
 }
