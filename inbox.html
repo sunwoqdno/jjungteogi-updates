@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark"><meta name="theme-color" content="#080d18">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>운영자 문의함 | 쭝터기</title>
+<style>
+:root{color-scheme:dark;font-family:Inter,Pretendard,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;--bg:#080d18;--panel:#121f33;--line:#2c445e;--text:#eef5ff;--muted:#a4b6ce;--mint:#88e8c9}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0,#15304a 0,transparent 48%),var(--bg);color:var(--text)}a{color:#99caff}button,input,select{font:inherit}input,select{min-height:46px;color:#f3f7ff;background:#081727;border:1px solid #3a5570;border-radius:10px;padding:11px 13px}button{cursor:pointer;color:#dcecff;background:#183650;border:1px solid #49627a;padding:10px 15px;font-weight:800;border-radius:11px}button:hover{background:#27536b}button:disabled{opacity:.5;cursor:not-allowed}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--mint);outline-offset:3px}.wrap{width:calc(100% - 34px);max-width:1120px;margin:auto}.header{border-bottom:1px solid #283c55;padding:22px 0}.header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.brand{font-size:21px;font-weight:850;letter-spacing:-.05em}.brand a{text-decoration:none;color:inherit}.brand b{background:#237a77;padding:8px;border-radius:10px;font-size:15px;margin-right:8px}.intro{padding:45px 0 25px}.intro h1{font-size:clamp(28px,5vw,43px);letter-spacing:-.05em;margin:0 0 13px}.intro p{font-size:13px;line-height:1.85;color:var(--muted);margin:0}.panel{background:linear-gradient(155deg,#15283f,#101d2f);border:1px solid var(--line);border-radius:18px;padding:25px;margin-bottom:17px}.panel h2{font-size:19px;letter-spacing:-.03em;margin:0 0 16px}.auth{max-width:580px}.field label{font-size:12px;color:#b8ccdf;display:block;font-weight:750;margin-bottom:9px}.auth input{display:block;width:100%}.auth button{margin-top:12px;border-color:#80d7c0;background:linear-gradient(110deg,#83e7ca,#80b6fa);color:#05241d}.alert{font-size:12px;line-height:1.8;color:#bad1e4;background:#142e42;border:1px solid #396276;padding:15px;border-radius:12px}.error{color:#f2b6b6;font-size:12px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:0 0 20px}.stat{padding:15px;border:1px solid #30495f;border-radius:13px;background:#0f2134}.stat small{font-size:12px;color:#a5b9d1}.stat strong{font-size:25px;display:block;margin-top:7px;font-variant-numeric:tabular-nums}.toolbar{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 16px}.buttons{display:flex;gap:7px;flex-wrap:wrap}.buttons button{padding:10px 13px;font-size:12px}.item{border:1px solid #2f465c;background:#0f2033;border-radius:14px;padding:18px;margin-bottom:12px}.item-top{display:flex;gap:12px;align-items:start;justify-content:space-between}.ticket{font-size:11px;color:#94b0c7}.title{font-size:16px;font-weight:850;margin:8px 0;letter-spacing:-.03em;overflow-wrap:anywhere}.detail{font-size:12px;color:#a7bdd4;line-height:1.9}.message{font-size:13px;line-height:1.85;white-space:pre-wrap;overflow-wrap:anywhere;margin:16px 0;background:#081a2a;border:1px solid #2d4358;border-radius:11px;padding:15px}.pill{display:inline-block;font-size:11px;border:1px solid #47775e;background:#183b37;color:#9aecd3;padding:6px 9px;border-radius:100px;font-weight:800;white-space:nowrap}.pill.done{border-color:#435a71;background:#233345;color:#aabacf}.pill.reviewing{border-color:#7a663e;background:#433621;color:#f2d29c}.actions{display:flex;flex-wrap:wrap;gap:8px}.actions button{font-size:12px;padding:9px 12px}.empty{border:1px dashed #436076;border-radius:12px;padding:35px 12px;text-align:center;color:#92aabe;font-size:13px}.status{min-height:18px;font-size:12px;color:#9ce8ce;margin:12px 0;white-space:pre-wrap}#inbox[hidden],#login[hidden]{display:none}.footer{border-top:1px solid #26394e;padding:25px 0;margin-top:40px;color:#8fa4b9;font-size:12px}
+@media(max-width:620px){.panel{padding:17px}.stats{gap:7px}.stat{padding:11px}.stat strong{font-size:20px}.intro{padding-top:33px}.item{padding:14px}.actions button{font-size:11px}}
+</style></head>
+<body>
+<header class="header"><div class="wrap"><div class="brand"><a href="./"><b>쭝</b>쭝터기</a> · <span style="font-weight:600;color:#a4b4c9">운영자 문의함</span></div><a href="feedback.html" style="font-size:12px">일반 문의 페이지 ↗</a></div></header>
+<main class="wrap"><section class="intro"><h1>문의·건의사항 관리</h1><p>홈페이지 익명 문의를 열람하고 상태를 관리하는 운영자 전용 화면입니다. 기존 쭝터기 통계 관리자의 접속키를 사용합니다.</p></section>
+<section class="panel auth" id="login"><h2>운영자 인증</h2><div class="alert">관리자 접속키는 이 페이지를 열어 둔 동안만 메모리에 유지됩니다. 브라우저 저장 공간에 저장하지 않으며 다른 방문자는 문의 내용을 열람할 수 없습니다.</div><form id="auth-form" style="margin-top:17px"><div class="field"><label for="key">쭝터기 관리자 접속키</label><input id="key" type="password" autocomplete="off" required placeholder="관리자_접속키.txt의 값 입력"></div><button type="submit" id="auth-button">문의함 열기</button></form><p class="status error" id="auth-status" role="alert"></p></section>
+<section id="inbox" hidden>
+<div class="stats" id="stats"><div class="stat"><small>최근 100건</small><strong id="count-all">0</strong></div><div class="stat"><small>미확인</small><strong id="count-new">0</strong></div><div class="stat"><small>처리 완료</small><strong id="count-done">0</strong></div></div>
+<div class="panel"><div class="toolbar"><div class="field"><label for="filter">상태별 보기</label><select id="filter"><option value="all">전체</option><option value="new">미확인</option><option value="reviewing">확인 중</option><option value="done">완료</option></select></div><div class="buttons"><button type="button" id="refresh">새로고침</button><button type="button" id="logout">관리자 접속 종료</button></div></div>
+<div class="alert">최근 100건까지 표시합니다. 새 문의가 접수되어도 자동으로 알림을 보내지 않으므로 이 페이지에서 새로고침하여 확인하세요. 익명 문의는 별도 답장 수단이 없어 회신할 수 없습니다.</div><div class="status" id="inbox-status" role="status"></div><div id="messages"></div></div>
+</section>
+</main><footer class="footer"><div class="wrap">© 2026 Jjungteogi · 운영자용 · 인증 후 문의 내용 열람 가능</div></footer>
+<script>
+(function(){
+"use strict";
+const API="https://tqhrhrkkucdnrvotmdea.supabase.co/functions/v1/jjung-feedback";
+const $=id=>document.getElementById(id);
+let key="",rows=[],busy=false;
+function el(tag,cls,val){const v=document.createElement(tag);if(cls)v.className=cls;if(val!==undefined)v.textContent=String(val);return v;}
+function msg(text){$("inbox-status").textContent=text;}
+async function call(data){
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
+ try{
+ const response=await fetch(API,{method:"POST",mode:"cors",credentials:"omit",headers:{"content-type":"application/json"},body:JSON.stringify({key,...data}),signal:controller.signal});
+ const output=await response.json().catch(()=>({}));
+ if(!response.ok)throw Error(response.status===401?"관리자 접속키가 올바르지 않습니다.":"서버 오류 ("+response.status+")");
+ return output;
+ }finally{clearTimeout(timer);}
+}
+function date(text){const d=new Date(text);return isNaN(d.getTime())?"시간 미확인":d.toLocaleString("ko-KR",{timeZone:"Asia/Seoul",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"});}
+function names(status){return {new:"미확인",reviewing:"확인 중",done:"완료"}[status]||"알 수 없음";}
+function render(){
+ $("count-all").textContent=rows.length;
+ $("count-new").textContent=rows.filter(x=>x.status==="new").length;
+ $("count-done").textContent=rows.filter(x=>x.status==="done").length;
+ const filter=$("filter").value,list=rows.filter(x=>filter==="all"||filter===x.status),root=$("messages");root.replaceChildren();
+ if(!list.length){root.appendChild(el("div","empty","조건에 맞는 문의가 없습니다."));return;}
+ list.forEach(item=>{
+  const card=el("article","item"),top=el("div","item-top"),left=el("div"),badge=el("span","pill "+(item.status||""),names(item.status));
+  left.append(el("div","ticket",date(item.created_at)+" · 접수번호 "+item.id.slice(0,8).toUpperCase()),el("div","title",item.title),el("div","detail",item.category+" · 작성자: "+(item.nickname||"익명")));
+  top.append(left,badge);card.append(top,el("div","message",item.message));
+  const actions=el("div","actions");
+  for(const [status,label] of [["new","미확인"],["reviewing","확인 중"],["done","완료"]]){
+   const button=el("button","",label);button.disabled=status===item.status||busy;button.type="button";
+   button.addEventListener("click",async()=>{
+    if(busy)return;busy=true;msg("상태를 변경하고 있습니다…");
+    try{await call({action:"set_status",id:item.id,status});item.status=status;msg("상태가 '"+label+"'로 변경됐습니다.");render();}
+    catch(e){msg("처리 실패: "+e.message);}
+    finally{busy=false;}
+   });
+   actions.append(button);
+  }
+  card.append(actions);root.append(card);
+ });
+}
+async function refresh(){
+ if(!key)return;msg("문의 목록을 확인하고 있습니다…");
+ try{
+ const result=await call({action:"list"});
+ rows=Array.isArray(result.rows)?result.rows:[];
+ $("login").hidden=true;$("inbox").hidden=false;
+ msg("최근 접수 내역을 조회했습니다. "+rows.length+"건");
+ render();return true;
+ }catch(e){msg("문의 조회 실패: "+e.message);$("auth-status").textContent=e.message;return false;}
+}
+$("auth-form").addEventListener("submit",async e=>{
+ e.preventDefault();const input=$("key");key=input.value.trim();input.value="";
+ $("auth-button").disabled=true;$("auth-status").textContent="";
+ try{if(!await refresh())key="";}finally{$("auth-button").disabled=false;}
+});
+$("refresh").addEventListener("click",refresh);
+$("filter").addEventListener("change",render);
+$("logout").addEventListener("click",()=>{
+ key="";rows=[];$("inbox").hidden=true;$("login").hidden=false;$("auth-status").textContent="관리자 접속을 종료했습니다.";$("inbox-status").textContent="";});
+})();
+</script>
+</body></html>
