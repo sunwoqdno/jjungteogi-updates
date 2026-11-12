@@ -1,0 +1,11 @@
+{
+  "name": "JJUNGTEOGI · 쭝터기",
+  "short_name": "JJUNGTEOGI",
+  "description": "아이온2 한국 서버 PvP 유틸리티",
+  "lang": "ko-KR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080d18",
+  "theme_color": "#080d18"
+}
