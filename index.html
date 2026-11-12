@@ -151,14 +151,14 @@
     var binary=(latest.assets||[]).find(function(a){return /\.exe$/i.test(a.name||"");});
     var link=binary&&binary.browser_download_url?binary.browser_download_url:(latest.html_url||defaultUrl);
     el("latest-version").textContent="LATEST · "+(latest.tag_name||"");
-    el("latest-detail").textContent="공개일 "+fmtDate(latest.published_at||latest.created_at)+" · "+(latest.prerelease?"테스트 배포판":"최신 안정 배포판");
+    el("latest-detail").textContent="공개일 "+fmtDate(latest.published_at||latest.created_at)+" · 최신 업데이트";
     el("download-link").href=link;
     el("hero-download").href=link;
     el("download-size").textContent=binary?humanBytes(binary.size):"릴리스 페이지에서 파일 확인";
     var list=el("release-list");list.replaceChildren();
     all.slice(0,6).forEach(function(r){
       var row=text("article","release","");
-      var info=document.createElement("div");info.appendChild(text("strong","",r.tag_name+(r.prerelease?" · 테스트":"")));
+      var info=document.createElement("div");info.appendChild(text("strong","",r.tag_name));
       info.appendChild(text("small","",fmtDate(r.published_at||r.created_at)+(r.body?" · 상세 내용은 GitHub에서 확인하세요":"")));
       var a=text("a","","변경 내역 ↗");a.href=r.html_url||defaultUrl;a.target="_blank";a.rel="noopener noreferrer";
       row.appendChild(info);row.appendChild(a);list.appendChild(row);
