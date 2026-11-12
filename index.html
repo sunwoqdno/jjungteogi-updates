@@ -146,13 +146,12 @@
   function text(tag,cls,value){var node=document.createElement(tag);if(cls)node.className=cls;node.textContent=value;return node;}
   function render(data){
     var all=data.filter(function(r){return r&&!r.draft&&r.tag_name;});
-    var stable=all.filter(function(r){return !r.prerelease;});
-    var latest=stable[0]||all[0];
+    var latest=all[0];
     if(!latest)throw Error("릴리스가 없습니다");
     var binary=(latest.assets||[]).find(function(a){return /\.exe$/i.test(a.name||"");});
     var link=binary&&binary.browser_download_url?binary.browser_download_url:(latest.html_url||defaultUrl);
     el("latest-version").textContent="LATEST · "+(latest.tag_name||"");
-    el("latest-detail").textContent="공개일 "+fmtDate(latest.published_at||latest.created_at)+" · 최신 안정 배포판";
+    el("latest-detail").textContent="공개일 "+fmtDate(latest.published_at||latest.created_at)+" · "+(latest.prerelease?"테스트 배포판":"최신 안정 배포판");
     el("download-link").href=link;
     el("hero-download").href=link;
     el("download-size").textContent=binary?humanBytes(binary.size):"릴리스 페이지에서 파일 확인";
