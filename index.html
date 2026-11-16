@@ -164,13 +164,13 @@
   function fmtDate(s){var d=new Date(s);return isNaN(d.valueOf())?"공개일 미확인":new Intl.DateTimeFormat("ko-KR",{year:"numeric",month:"2-digit",day:"2-digit",timeZone:"Asia/Seoul"}).format(d);}
   function text(tag,cls,value){var node=document.createElement(tag);if(cls)node.className=cls;node.textContent=value;return node;}
   function render(data){
-    var all=data.filter(function(r){return r&&!r.draft&&r.tag_name;});
+    var all=data.filter(function(r){return r&&!r.draft&&r.tag_name;}).sort(function(a,b){return new Date(b.published_at||b.created_at)-new Date(a.published_at||a.created_at);});
     var latest=all[0];
     if(!latest)throw Error("릴리스가 없습니다");
     var binary=(latest.assets||[]).find(function(a){return /\.exe$/i.test(a.name||"");});
     var link=binary&&binary.browser_download_url?binary.browser_download_url:(latest.html_url||defaultUrl);
     el("latest-version").textContent="LATEST · "+(latest.tag_name||"");
-    el("latest-detail").textContent="공개일 "+fmtDate(latest.published_at||latest.created_at)+" · 최신 업데이트";
+    el("latest-detail").textContent="공개일 "+fmtDate(latest.published_at||latest.created_at)+(latest.prerelease?" · 시험 배포판":" · 최신 업데이트");
     el("download-link").href=link;
     el("hero-download").href=link;
     el("download-size").textContent=binary?humanBytes(binary.size):"릴리스 페이지에서 파일 확인";
