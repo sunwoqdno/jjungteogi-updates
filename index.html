@@ -193,12 +193,12 @@
     var a=text("a","","버전 보기 ↗");a.href=defaultUrl;a.target="_blank";a.rel="noopener noreferrer";row.append(box,a);list.append(row);
   }
   try{
-    var cached=window.sessionStorage.getItem("jjung-releases");
+    var cached=window.sessionStorage.getItem("jjung-releases-v2");
     if(cached){var value=JSON.parse(cached);if(Date.now()-value.time<600000){render(value.data);return;}}
   }catch(e){}
   fetch(api,{headers:{"Accept":"application/vnd.github+json"}})
     .then(function(resp){if(!resp.ok)throw Error("GitHub API "+resp.status);return resp.json();})
-    .then(function(data){if(!Array.isArray(data))throw Error("Invalid data");render(data);try{window.sessionStorage.setItem("jjung-releases",JSON.stringify({time:Date.now(),data:data}));}catch(e){}})
+    .then(function(data){if(!Array.isArray(data))throw Error("Invalid data");render(data);try{window.sessionStorage.setItem("jjung-releases-v2",JSON.stringify({time:Date.now(),data:data}));}catch(e){}})
     .catch(fail);
 })();
 </script>
