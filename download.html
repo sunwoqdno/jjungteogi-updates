@@ -21,11 +21,11 @@
 const repo="https://api.github.com/repos/sunwoqdno/jjungteogi-updates/releases?per_page=20";
 const fallback="https://github.com/sunwoqdno/jjungteogi-updates/releases";
 fetch(repo,{headers:{"Accept":"application/vnd.github+json"}}).then(r=>{if(!r.ok)throw Error("GitHub API");return r.json();}).then(items=>{
-const rel=items.find(x=>x&&!x.draft&&(x.assets||[]).some(a=>/\.exe$/i.test(a.name||"")));
+const rel=items.filter(x=>x&&!x.draft&&(x.assets||[]).some(a=>/\.exe$/i.test(a.name||""))).sort((a,b)=>new Date(b.published_at||b.created_at)-new Date(a.published_at||a.created_at))[0];
 if(!rel)throw Error("No release with exe");
 const asset=rel.assets.find(a=>/\.exe$/i.test(a.name||""));
 document.getElementById("exe-download").href=asset.browser_download_url;
 document.getElementById("current-version").textContent="최신 버전 · "+rel.tag_name;
-document.getElementById("release-date").textContent="배포일 "+new Intl.DateTimeFormat("ko-KR",{dateStyle:"medium",timeZone:"Asia/Seoul"}).format(new Date(rel.published_at||rel.created_at));
+document.getElementById("release-date").textContent="배포일 "+new Intl.DateTimeFormat("ko-KR",{dateStyle:"medium",timeZone:"Asia/Seoul"}).format(new Date(rel.published_at||rel.created_at))+(rel.prerelease?" · 시험 배포판":"");
 document.getElementById("download-meta").textContent=asset.name+" · "+(asset.size/1048576).toFixed(1)+" MB · GitHub 공식 배포 파일";
 }).catch(()=>{document.getElementById("current-version").textContent="GitHub Releases에서 최신 버전 확인";document.getElementById("release-date").textContent="자동 조회가 지연되어 릴리스 목록으로 연결합니다.";document.getElementById("exe-download").href=fallback;});})();</script><footer><div class="wrap"><a href="./">홈페이지</a><a href="equipment.html">PvP 장비조회 기능</a><a href="download.html">최신 버전 다운로드</a><a href="schedule.html">어비스 일정</a><a href="feedback.html">문의·건의</a><a href="privacy.html">개인정보 안내</a><p class="muted">쭝터기(JJUNGTEOGI)는 한국에서 개인 개발한 비공식 아이온2 한국 서버용 도구입니다.</p></div></footer></body></html>
