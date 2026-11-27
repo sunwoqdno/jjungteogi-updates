@@ -62,7 +62,7 @@
       <h1>아이온2 PvP<br><span>실시간 장비 정보조회</span></h1>
       <p class="lead">쭝터기(JJUNGTEOGI)는 한국에서 개발한 아이온2 PvP 실시간 상대 장비 정보조회 프로그램입니다. 교전 중 상대 장비·세트 정보를 확인하고 최근 교전과 RP 증감을 한 화면에서 관리하세요. 장비 조회는 프로그램 설치 후 이용할 수 있습니다.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" id="hero-download" href="https://github.com/sunwoqdno/jjungteogi-updates/releases/download/v0.9.110/Jjungteogi.exe" rel="noopener noreferrer">↓ 최신 버전 다운로드</a>
+        <a class="btn btn-primary" id="hero-download" href="https://github.com/sunwoqdno/jjungteogi-updates/releases/download/v0.9.135/Jjungteogi.exe" rel="noopener noreferrer">↓ 최신 버전 다운로드</a>
         <a class="btn btn-secondary" href="equipment.html">실시간 장비조회 기능 →</a><a class="btn btn-secondary" href="schedule.html">어비스 일정 ↗</a>
       </div>
       <div class="meta"><span>Windows 64-bit</span><span>무료 배포</span><span>한국에서 개발·배포</span><span>아이온2 한국 서버 기준</span></div>
@@ -111,8 +111,8 @@
     <div class="container">
       <div class="section-head"><div><div class="kicker">DOWNLOAD</div><h2>쭝터기 다운로드</h2><p class="sub">공식 GitHub Releases에 게시된 파일을 제공합니다.</p></div></div>
       <div class="download-panel">
-        <div><div class="version" id="latest-version">LATEST · v0.9.110</div><h3>쭝터기 · Windows</h3><p id="latest-detail">최신 공개 배포 정보를 불러오고 있습니다.</p></div>
-        <div class="download-side"><a class="btn btn-primary" id="download-link" href="https://github.com/sunwoqdno/jjungteogi-updates/releases/download/v0.9.110/Jjungteogi.exe" rel="noopener noreferrer">↓ 다운로드</a><small id="download-size">GitHub 공식 릴리스</small></div>
+        <div><div class="version" id="latest-version">LATEST · v0.9.135</div><h3>쭝터기 · Windows</h3><p id="latest-detail">최신 공개 배포 정보를 불러오고 있습니다.</p></div>
+        <div class="download-side"><a class="btn btn-primary" id="download-link" href="https://github.com/sunwoqdno/jjungteogi-updates/releases/download/v0.9.135/Jjungteogi.exe" rel="noopener noreferrer">↓ 다운로드</a><small id="download-size">GitHub 공식 릴리스</small></div>
       </div>
     </div>
   </section>
@@ -159,7 +159,7 @@
   var owner="sunwoqdno", repo="jjungteogi-updates";
   var api="https://api.github.com/repos/"+owner+"/"+repo+"/releases?per_page=10";
   var defaultUrl="https://github.com/"+owner+"/"+repo+"/releases";
-   var officialExe="https://github.com/sunwoqdno/jjungteogi-updates/releases/download/v0.9.110/Jjungteogi.exe";
+   var officialExe="https://github.com/sunwoqdno/jjungteogi-updates/releases/download/v0.9.135/Jjungteogi.exe";
   function el(id){return document.getElementById(id);}
   function humanBytes(num){if(typeof num!=="number"||num<=0)return "GitHub 공식 릴리스";return (num/1048576).toFixed(1)+" MB";}
   function fmtDate(s){var d=new Date(s);return isNaN(d.valueOf())?"공개일 미확인":new Intl.DateTimeFormat("ko-KR",{year:"numeric",month:"2-digit",day:"2-digit",timeZone:"Asia/Seoul"}).format(d);}
@@ -194,12 +194,12 @@
     var a=text("a","","버전 보기 ↗");a.href=defaultUrl;a.target="_blank";a.rel="noopener noreferrer";row.append(box,a);list.append(row);
   }
   try{
-    var cached=window.sessionStorage.getItem("jjung-releases-v0.9.110");
+    var cached=window.sessionStorage.getItem("jjung-releases-v0.9.135");
     if(cached){var value=JSON.parse(cached);if(Date.now()-value.time<600000){render(value.data);return;}}
   }catch(e){}
   fetch(api,{headers:{"Accept":"application/vnd.github+json"}})
     .then(function(resp){if(!resp.ok)throw Error("GitHub API "+resp.status);return resp.json();})
-    .then(function(data){if(!Array.isArray(data))throw Error("Invalid data");render(data);try{window.sessionStorage.setItem("jjung-releases-v0.9.110",JSON.stringify({time:Date.now(),data:data}));}catch(e){}})
+    .then(function(data){if(!Array.isArray(data))throw Error("Invalid data");render(data);try{window.sessionStorage.setItem("jjung-releases-v0.9.135",JSON.stringify({time:Date.now(),data:data}));}catch(e){}})
     .catch(fail);
 })();
 </script>
